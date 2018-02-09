@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Namespace: ngeox.profile</title>
+    <title>JSDoc: Class: AbstractMobileController <small>controller</small></title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Namespace: ngeox.profile</h1>
+    <h1 class="page-title">Class: AbstractMobileController <small>controller</small></h1>
 
     
 
@@ -28,8 +28,8 @@
 
 <header>
     
-        <h2 id="I18n">
-            <span class="ancestors">ngeox.profile.</span>I18n
+        <h2 id="AbstractMobileController">
+            <span class="ancestors">gmf.controllers.</span>AbstractMobileController
         </h2>
         
     
@@ -40,16 +40,32 @@
     
         
 
-        
-
-
     
-    <h5 class="subsection-title">Properties:</h5>
-    
+
+    <h4 class="name" id="AbstractMobileController"><span class="type-signature"></span>new AbstractMobileController<span class="signature">(config, $scope, $injector)</span><span class="type-signature"></span></h4>
 
     
 
-<table class="props">
+
+
+<div class="description">
+    <p>Mobile application abstract controller.</p>
+<p>This file includes <code>goog.require</code>'s mobile components/directives used
+by the HTML page and the controller to provide the configuration.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -62,7 +78,7 @@
 
         
 
-        
+        <th class="last">Description</th>
     </tr>
     </thead>
 
@@ -71,19 +87,12 @@
 
         <tr>
             
-                <td class="name"><code>xAxis</code></td>
+                <td class="name"><code>config</code></td>
             
 
             <td class="type">
             
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
+                <a href="gmfx.Config.html">gmfx.Config</a>
             
             </td>
 
@@ -91,26 +100,19 @@
 
             
 
-            </td>
+            <td class="description last"><p>A part of the application config.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>yAxis</code></td>
+                <td class="name"><code>$scope</code></td>
             
 
             <td class="type">
             
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
+                <a href="angular.Scope.html">angular.Scope</a>
             
             </td>
 
@@ -118,12 +120,36 @@
 
             
 
+            <td class="description last"><p>Scope.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>$injector</code></td>
+            
+
+            <td class="type">
+            
+                <a href="angular.$injector.html">angular.$injector</a>
+            
             </td>
+
+            
+
+            
+
+            <td class="description last"><p>Main injector.</p></td>
         </tr>
 
     
     </tbody>
 </table>
+
+
+
+
 
 
 
@@ -157,7 +183,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L2006">options/ngeox.js:2006</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L39">contribs/gmf/src/controllers/AbstractMobileController.js:39</a>
     </div>
     
 
@@ -169,9 +195,33 @@
 </dl>
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="gmf.controllers.AbstractAppController.html">gmf.controllers.AbstractAppController</a></li>
+    </ul>
+
 
     
 
@@ -188,15 +238,10 @@
 
         
             
-<h4 class="name" id="xAxis"><span class="type-signature"></span>xAxis<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
+<h4 class="name" id="$scope"><span class="type-signature"></span>$scope<span class="type-signature">: <a href="https://docs.angularjs.org/guide/scope">angular.Scope</a></span> </h4>
 
 
 
-
-<div class="description">
-    <p>Text for the x axis. Will be completed by <code>km</code> or ' m' (for kilometers or
-meters).</p>
-</div>
 
 
 
@@ -208,6 +253,11 @@ meters).</p>
 
     
 
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#$scope">gmf.controllers.AbstractAppController#$scope</a>
+    </li></ul></dd>
     
 
     
@@ -231,7 +281,7 @@ meters).</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L2014">options/ngeox.js:2014</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L335">contribs/gmf/src/controllers/AbstractAppController.js:335</a>
     </div>
     
 
@@ -249,14 +299,1307 @@ meters).</p>
 
         
             
-<h4 class="name" id="yAxis"><span class="type-signature"></span>yAxis<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
+<h4 class="name" id="defaultLang"><span class="type-signature"></span>defaultLang<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
 
 
 
 
 <div class="description">
-    <p>Text for the y axis. Will be completed by ' m' (for meters).</p>
+    <p>Default language</p>
 </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#defaultLang">gmf.controllers.AbstractAppController#defaultLang</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L347">contribs/gmf/src/controllers/AbstractAppController.js:347</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="dimensions"><span class="type-signature">(non-null) </span>dimensions<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>:<a href="-_.html"></a>.&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#dimensions">gmf.controllers.AbstractAppController#dimensions</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L162">contribs/gmf/src/controllers/AbstractAppController.js:162</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowContent"><span class="type-signature">(nullable) </span>displaywindowContent<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#displaywindowContent">gmf.controllers.AbstractAppController#displaywindowContent</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L545">contribs/gmf/src/controllers/AbstractAppController.js:545</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowDraggableContainment"><span class="type-signature"></span>displaywindowDraggableContainment<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#displaywindowDraggableContainment">gmf.controllers.AbstractAppController#displaywindowDraggableContainment</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L551">contribs/gmf/src/controllers/AbstractAppController.js:551</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowHeight"><span class="type-signature">(nullable) </span>displaywindowHeight<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#displaywindowHeight">gmf.controllers.AbstractAppController#displaywindowHeight</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L557">contribs/gmf/src/controllers/AbstractAppController.js:557</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowOpen"><span class="type-signature"></span>displaywindowOpen<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#displaywindowOpen">gmf.controllers.AbstractAppController#displaywindowOpen</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L563">contribs/gmf/src/controllers/AbstractAppController.js:563</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowTitle"><span class="type-signature">(nullable) </span>displaywindowTitle<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#displaywindowTitle">gmf.controllers.AbstractAppController#displaywindowTitle</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L569">contribs/gmf/src/controllers/AbstractAppController.js:569</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowUrl"><span class="type-signature">(nullable) </span>displaywindowUrl<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#displaywindowUrl">gmf.controllers.AbstractAppController#displaywindowUrl</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L575">contribs/gmf/src/controllers/AbstractAppController.js:575</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowWidth"><span class="type-signature">(nullable) </span>displaywindowWidth<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#displaywindowWidth">gmf.controllers.AbstractAppController#displaywindowWidth</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L581">contribs/gmf/src/controllers/AbstractAppController.js:581</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="drawFeatureActive"><span class="type-signature"></span>drawFeatureActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#drawFeatureActive">gmf.controllers.AbstractAppController#drawFeatureActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L296">contribs/gmf/src/controllers/AbstractAppController.js:296</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="drawProfilePanelActive"><span class="type-signature"></span>drawProfilePanelActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#drawProfilePanelActive">gmf.controllers.AbstractAppController#drawProfilePanelActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L302">contribs/gmf/src/controllers/AbstractAppController.js:302</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="filterSelectorActive"><span class="type-signature"></span>filterSelectorActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#filterSelectorActive">gmf.controllers.AbstractAppController#filterSelectorActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L233">contribs/gmf/src/controllers/AbstractAppController.js:233</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="getBrowserLanguage"><span class="type-signature"></span>getBrowserLanguage<span class="type-signature">: <a href="ngeox.html#miscGetBrowserLanguage">ngeox.miscGetBrowserLanguage</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#getBrowserLanguage">gmf.controllers.AbstractAppController#getBrowserLanguage</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L320">contribs/gmf/src/controllers/AbstractAppController.js:320</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gettextCatalog"><span class="type-signature"></span>gettextCatalog<span class="type-signature">: <a href="https://angular-gettext.rocketeer.be/dev-guide/api/angular-gettext/">angularGettext.Catalog</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The gettext catalog</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#gettextCatalog">gmf.controllers.AbstractAppController#gettextCatalog</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L359">contribs/gmf/src/controllers/AbstractAppController.js:359</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gmfThemeManager"><span class="type-signature"></span>gmfThemeManager<span class="type-signature">: <a href="gmf.theme.Manager.html">gmf.theme.Manager</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#gmfThemeManager">gmf.controllers.AbstractAppController#gmfThemeManager</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L70">contribs/gmf/src/controllers/AbstractAppController.js:70</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gmfUser"><span class="type-signature"></span>gmfUser<span class="type-signature">: <a href="gmfx.html#User">gmfx.User</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#gmfUser">gmf.controllers.AbstractAppController#gmfUser</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L308">contribs/gmf/src/controllers/AbstractAppController.js:308</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="hasEditableLayers"><span class="type-signature"></span>hasEditableLayers<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#hasEditableLayers">gmf.controllers.AbstractAppController#hasEditableLayers</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L102">contribs/gmf/src/controllers/AbstractAppController.js:102</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="lang"><span class="type-signature"></span>lang<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#lang">gmf.controllers.AbstractAppController#lang</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L341">contribs/gmf/src/controllers/AbstractAppController.js:341</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="langUrls"><span class="type-signature">(non-null) </span>langUrls<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>:<a href="-_.html"></a>.&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Languages URL</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#langUrls">gmf.controllers.AbstractAppController#langUrls</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L353">contribs/gmf/src/controllers/AbstractAppController.js:353</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="leftNavVisible"><span class="type-signature"></span>leftNavVisible<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#leftNavVisible">gmf.controllers.AbstractAppController#leftNavVisible</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L45">contribs/gmf/src/controllers/AbstractMobileController.js:45</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="manageResize"><span class="type-signature"></span>manageResize<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Whether to update the size of the map on browser window resize.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#manageResize">gmf.controllers.AbstractAppController#manageResize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L509">contribs/gmf/src/controllers/AbstractAppController.js:509</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="map"><span class="type-signature"></span>map<span class="type-signature">: <a href="http://openlayers.org/en/master/apidoc/ol.Map.html">ol.Map</a></span> </h4>
+
+
+
 
 
 
@@ -291,7 +1634,1059 @@ meters).</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L2021">options/ngeox.js:2021</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L107">contribs/gmf/src/controllers/AbstractMobileController.js:107</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="mapToolsGroup"><span class="type-signature"></span>mapToolsGroup<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#mapToolsGroup">gmf.controllers.AbstractAppController#mapToolsGroup</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L369">contribs/gmf/src/controllers/AbstractAppController.js:369</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="measureLengthActive"><span class="type-signature"></span>measureLengthActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The active state of the directive responsible of length measurements.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#measureLengthActive">gmf.controllers.AbstractAppController#measureLengthActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L290">contribs/gmf/src/controllers/AbstractAppController.js:290</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="measurePointActive"><span class="type-signature"></span>measurePointActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The active state of the directive responsible of point measurements.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#measurePointActive">gmf.controllers.AbstractAppController#measurePointActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L283">contribs/gmf/src/controllers/AbstractAppController.js:283</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="mobileGeolocationOptions"><span class="type-signature"></span>mobileGeolocationOptions<span class="type-signature">: <a href="ngeox.html#MobileGeolocationDirectiveOptions">ngeox.MobileGeolocationDirectiveOptions</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L89">contribs/gmf/src/controllers/AbstractMobileController.js:89</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ngeoLocation"><span class="type-signature"></span>ngeoLocation<span class="type-signature">: <a href="ngeo.statemanager.Location.html">ngeo.statemanager.Location</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Location service</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#ngeoLocation">gmf.controllers.AbstractAppController#ngeoLocation</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L51">contribs/gmf/src/controllers/AbstractAppController.js:51</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="printActive"><span class="type-signature"></span>printActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#printActive">gmf.controllers.AbstractAppController#printActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L259">contribs/gmf/src/controllers/AbstractAppController.js:259</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="printPanelActive"><span class="type-signature"></span>printPanelActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#printPanelActive">gmf.controllers.AbstractAppController#printPanelActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L253">contribs/gmf/src/controllers/AbstractAppController.js:253</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="queryActive"><span class="type-signature"></span>queryActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The active state of the ngeo query directive.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#queryActive">gmf.controllers.AbstractAppController#queryActive</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L240">contribs/gmf/src/controllers/AbstractAppController.js:240</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="queryAutoClear"><span class="type-signature"></span>queryAutoClear<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Set the clearing of the ngeoQuery after the deactivation of the query</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#queryAutoClear">gmf.controllers.AbstractAppController#queryAutoClear</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L247">contribs/gmf/src/controllers/AbstractAppController.js:247</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="queryFeatureStyle"><span class="type-signature"></span>queryFeatureStyle<span class="type-signature">: <a href="http://openlayers.org/en/master/apidoc/ol.style.Style.html">ol.style.Style</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>FeatureStyle used by the gmf.query.windowComponent</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#queryFeatureStyle">gmf.controllers.AbstractAppController#queryFeatureStyle</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L219">contribs/gmf/src/controllers/AbstractAppController.js:219</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="resizeTransition"><span class="type-signature"></span>resizeTransition<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The duration (milliseconds) of the animation that may occur on the div
+containing the map. Used to smoothly resize the map while the animation
+is in progress.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#resizeTransition">gmf.controllers.AbstractAppController#resizeTransition</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L518">contribs/gmf/src/controllers/AbstractAppController.js:518</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="rightNavVisible"><span class="type-signature"></span>rightNavVisible<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#rightNavVisible">gmf.controllers.AbstractAppController#rightNavVisible</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L51">contribs/gmf/src/controllers/AbstractMobileController.js:51</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="searchDatasources"><span class="type-signature"></span>searchDatasources<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>:<a href="-_.html"></a>.&lt;<a href="gmfx.html#SearchComponentDatasource">gmfx.SearchComponentDatasource</a>:<a href="-_.html"></a>></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#searchDatasources">gmf.controllers.AbstractAppController#searchDatasources</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L150">contribs/gmf/src/controllers/AbstractAppController.js:150</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="searchListeners"><span class="type-signature"></span>searchListeners<span class="type-signature">: <a href="ngeox.html#SearchDirectiveListeners">ngeox.SearchDirectiveListeners</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L63">contribs/gmf/src/controllers/AbstractMobileController.js:63</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="searchOverlayVisible"><span class="type-signature"></span>searchOverlayVisible<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L57">contribs/gmf/src/controllers/AbstractMobileController.js:57</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="stateManager"><span class="type-signature"></span>stateManager<span class="type-signature">: <a href="ngeo.statemanager.Service.html">ngeo.statemanager.Service</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#stateManager">gmf.controllers.AbstractAppController#stateManager</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L325">contribs/gmf/src/controllers/AbstractAppController.js:325</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="tmhDynamicLocale"><span class="type-signature"></span>tmhDynamicLocale<span class="type-signature">: tmhDynamicLocale</span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#tmhDynamicLocale">gmf.controllers.AbstractAppController#tmhDynamicLocale</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L330">contribs/gmf/src/controllers/AbstractAppController.js:330</a>
     </div>
     
 
@@ -311,48 +2706,664 @@ meters).</p>
     
 
     
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2 id="LineConfiguration">
-            <span class="ancestors">ngeox.profile.</span>LineConfiguration
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>Configuration object for one profile's line.</p></div>
-        
+        <h3 class="subsection-title">Methods</h3>
 
         
-
-
-    
-    <h5 class="subsection-title">Properties:</h5>
-    
+            
 
     
 
-<table class="props">
+    <h4 class="name" id="getLocationIcon"><span class="type-signature">(protected) </span>getLocationIcon<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#getLocationIcon">gmf.controllers.AbstractAppController#getLocationIcon</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L694">contribs/gmf/src/controllers/AbstractAppController.js:694</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+
+    <a href="Element.html">Element</a>
+
+
+    <p>Span element with font-awesome inside of it</p>
+
+</div>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="hideNav"><span class="type-signature"></span>hideNav<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Hide both navigation menus.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L155">contribs/gmf/src/controllers/AbstractMobileController.js:155</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="hideSearchOverlay"><span class="type-signature"></span>hideSearchOverlay<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Hide search overlay.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L174">contribs/gmf/src/controllers/AbstractMobileController.js:174</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="initLanguage"><span class="type-signature"></span>initLanguage<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#initLanguage">gmf.controllers.AbstractAppController#initLanguage</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L613">contribs/gmf/src/controllers/AbstractAppController.js:613</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="leftNavIsVisible"><span class="type-signature"></span>leftNavIsVisible<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L184">contribs/gmf/src/controllers/AbstractMobileController.js:184</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+
+    boolean
+
+
+    <p>Return true if the left navigation menus is visible,
+otherwise false.</p>
+
+</div>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="navIsVisible"><span class="type-signature"></span>navIsVisible<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L165">contribs/gmf/src/controllers/AbstractMobileController.js:165</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+
+    boolean
+
+
+    <p>Return true if one of the navigation menus is visible,
+otherwise false.</p>
+
+</div>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="rightNavIsVisible"><span class="type-signature"></span>rightNavIsVisible<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L194">contribs/gmf/src/controllers/AbstractMobileController.js:194</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+
+    boolean
+
+
+    <p>Return true if the right navigation menus is visible,
+otherwise false.</p>
+
+</div>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="switchLanguage"><span class="type-signature"></span>switchLanguage<span class="signature">(lang)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -365,7 +3376,7 @@ meters).</p>
 
         
 
-        
+        <th class="last">Description</th>
     </tr>
     </thead>
 
@@ -374,19 +3385,12 @@ meters).</p>
 
         <tr>
             
-                <td class="name"><code>color</code></td>
+                <td class="name"><code>lang</code></td>
             
 
             <td class="type">
             
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
+                string
             
             </td>
 
@@ -394,31 +3398,7 @@ meters).</p>
 
             
 
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>zExtractor</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
+            <td class="description last"><p>Language code.</p></td>
         </tr>
 
     
@@ -428,12 +3408,21 @@ meters).</p>
 
 
 
+
+
+
+
 <dl class="details">
 
     
 
     
 
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="gmf.controllers.AbstractAppController.html#switchLanguage">gmf.controllers.AbstractAppController#switchLanguage</a>
+    </li></ul></dd>
     
 
     
@@ -457,80 +3446,7 @@ meters).</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1895">options/ngeox.js:1895</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="color"><span class="type-signature"></span>color<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Color of the line (hex color string).</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1902">options/ngeox.js:1902</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractAppController.js#L602">contribs/gmf/src/controllers/AbstractAppController.js:602</a>
     </div>
     
 
@@ -546,16 +3462,36 @@ meters).</p>
 
 
 
+
+
+
+
+
+
+
+
+
+
         
             
-<h4 class="name" id="zExtractor"><span class="type-signature"></span>zExtractor<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
+
+    
+
+    <h4 class="name" id="toggleLeftNavVisibility"><span class="type-signature"></span>toggleLeftNavVisibility<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
 
 
 
 
-<div class="description">
-    <p>Extract the elevation of a point (an item of the elevation data array).</p>
-</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -590,7 +3526,7 @@ meters).</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1909">options/ngeox.js:1909</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L138">contribs/gmf/src/controllers/AbstractMobileController.js:138</a>
     </div>
     
 
@@ -606,265 +3542,36 @@ meters).</p>
 
 
 
-        
-    
 
-    
 
-    
 
-    
-</article>
 
-</section>
 
 
 
 
-
-
-
-<section>
-
-<header>
-    
-        <h2 id="PoiExtractor">
-            <span class="ancestors">ngeox.profile.</span>PoiExtractor
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>The POI data extractor is used to extract data from a POI.
-The POI is an item of the POI data array.</p></div>
-        
-
-        
-
-
-    
-    <h5 class="subsection-title">Properties:</h5>
-    
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>id</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>dist</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>z</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sort</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>title</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1912">options/ngeox.js:1912</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
 
 
         
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
             
-<h4 class="name" id="dist"><span class="type-signature"></span>dist<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
+
+    
+
+    <h4 class="name" id="toggleRightNavVisibility"><span class="type-signature"></span>toggleRightNavVisibility<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
 
 
 
 
-<div class="description">
-    <p>Extract the distance from origin of a POI.</p>
-</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -899,7 +3606,7 @@ The POI is an item of the POI data array.</p></div>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1937">options/ngeox.js:1937</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/contribs/gmf/src/controllers/AbstractMobileController.js#L146">contribs/gmf/src/controllers/AbstractMobileController.js:146</a>
     </div>
     
 
@@ -915,60 +3622,10 @@ The POI is an item of the POI data array.</p></div>
 
 
 
-        
-            
-<h4 class="name" id="id"><span class="type-signature"></span>id<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
 
 
 
 
-<div class="description">
-    <p>Extract the id of a POI.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1930">options/ngeox.js:1930</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
 
 
 
@@ -976,1762 +3633,6 @@ The POI is an item of the POI data array.</p></div>
 
 
         
-            
-<h4 class="name" id="sort"><span class="type-signature"></span>sort<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Extract the sequence number of a POI.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1951">options/ngeox.js:1951</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="title"><span class="type-signature"></span>title<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Extract the title of a POI.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1958">options/ngeox.js:1958</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="z"><span class="type-signature"></span>z<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Extract the elevation of a POI.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1944">options/ngeox.js:1944</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2 id="ProfileFormatter">
-            <span class="ancestors">ngeox.profile.</span>ProfileFormatter
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-
-
-    
-    <h5 class="subsection-title">Properties:</h5>
-    
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>xhover</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>yhover</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>xtick</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>ytick</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1969">options/ngeox.js:1969</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="xhover"><span class="type-signature"></span>xhover<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Format the xhover distance.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1976">options/ngeox.js:1976</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="xtick"><span class="type-signature"></span>xtick<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Format the xtick, for graduating the x axis.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1990">options/ngeox.js:1990</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="yhover"><span class="type-signature"></span>yhover<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Format the yhover elevation.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1983">options/ngeox.js:1983</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="ytick"><span class="type-signature"></span>ytick<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Format the ytick, for graduating the y axis.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1997">options/ngeox.js:1997</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2 id="ProfileOptions">
-            <span class="ancestors">ngeox.profile.</span>ProfileOptions
-        </h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>Options for the profile.</p></div>
-        
-
-        
-
-
-    
-    <h5 class="subsection-title">Properties:</h5>
-    
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>styleDefs</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>poiLabelAngle</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>formatter</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ngeox.profile.html#ProfileFormatter">ngeox.profile.ProfileFormatter</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>distanceExtractor</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>linesConfiguration</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>:<a href="-_.html"></a>.&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>, <a href="ngeox.profile.html#LineConfiguration">ngeox.profile.LineConfiguration</a>:<a href="-_.html"></a>></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>poiExtractor</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ngeox.profile.html#PoiExtractor">ngeox.profile.PoiExtractor</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>light</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>lightXAxis</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>scaleModifier</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>hoverCallback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>outCallback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>i18n</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="ngeox.profile.html#I18n">ngeox.profile.I18n</a></span>
-|
-
-<span class="param-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1785">options/ngeox.js:1785</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="distanceExtractor"><span class="type-signature"></span>distanceExtractor<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Extract the distance from origin of a point (an item of the elevation data
-array).</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1831">options/ngeox.js:1831</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="formatter"><span class="type-signature"></span>formatter<span class="type-signature">: <a href="ngeox.profile.html#ProfileFormatter">ngeox.profile.ProfileFormatter</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Formatter giving full control on how numbers are formatted.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1823">options/ngeox.js:1823</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="hoverCallback"><span class="type-signature"></span>hoverCallback<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>A callback called from the profile when the mouse moves over a point.
-The point, an item of the elevation data array, is passed as the first
-argument of the function.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1878">options/ngeox.js:1878</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="light"><span class="type-signature"></span>light<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Show a simplified profile when true.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1853">options/ngeox.js:1853</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="lightXAxis"><span class="type-signature"></span>lightXAxis<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Show a simplified x axis with only both end ticks.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1860">options/ngeox.js:1860</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="linesConfiguration"><span class="type-signature">(non-null) </span>linesConfiguration<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>:<a href="-_.html"></a>.&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>, <a href="ngeox.profile.html#LineConfiguration">ngeox.profile.LineConfiguration</a>:<a href="-_.html"></a>></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Configuration object for the profile's lines. The key string of each object
-is used as class for its respective svg line.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1839">options/ngeox.js:1839</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="outCallback"><span class="type-signature"></span>outCallback<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>A callback called from the profile when the mouse leaves the profile.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1885">options/ngeox.js:1885</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="poiExtractor"><span class="type-signature"></span>poiExtractor<span class="type-signature">: <a href="ngeox.profile.html#PoiExtractor">ngeox.profile.PoiExtractor</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Extractor for parsing POI data.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1846">options/ngeox.js:1846</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="poiLabelAngle"><span class="type-signature"></span>poiLabelAngle<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Inline CSS style definition to inject in the SVG.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1816">options/ngeox.js:1816</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="scaleModifier"><span class="type-signature"></span>scaleModifier<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Allows to modify the raw x and y scales.
-Notably, it is possible to modify the y domain according to XY ratio rules,
-add padding or enforce y lower bound.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1869">options/ngeox.js:1869</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="styleDefs"><span class="type-signature"></span>styleDefs<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
-
-
-
-
-<div class="description">
-    <p>Inline CSS style definition to inject in the SVG.</p>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <div class="tag-source">
-    
-        <a href="https://github.com/camptocamp/ngeo/blob/master/options/ngeox.js#L1809">options/ngeox.js:1809</a>
-    </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
-
     
 
     
