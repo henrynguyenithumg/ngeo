@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: UnitPrefix <small>filter:ngeoUnitPrefix</small></title>
+    <title>JSDoc: Class: AbstractAppController <small>controller</small></title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: UnitPrefix <small>filter:ngeoUnitPrefix</small></h1>
+    <h1 class="page-title">Class: AbstractAppController <small>controller</small></h1>
 
     
 
@@ -28,8 +28,8 @@
 
 <header>
     
-        <h2 id="UnitPrefix">
-            <span class="ancestors">ngeo.misc.filters.</span>UnitPrefix
+        <h2 id="AbstractAppController">
+            <span class="ancestors">gmf.controllers.</span>AbstractAppController
         </h2>
         
     
@@ -42,25 +42,16 @@
 
     
 
-    <h4 class="name" id="UnitPrefix"><span class="type-signature"></span>new UnitPrefix<span class="signature">($filter)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="AbstractAppController"><span class="type-signature"></span>new AbstractAppController<span class="signature">(config, $scope, $injector)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    <p>A filter used to format a number with the prefix and unit</p>
-<p>Arguments:</p>
-<ul>
-<li>opt_unit: The unit to used, default is ''.</li>
-<li>opt_type: (unit|square|binary) the type of units, default is 'unit'.</li>
-<li>opt_precision: The used precision, default is 3.</li>
-</ul>
-<p>Examples:</p>
-<pre class="prettyprint source"><code> {{25000 | ngeoUnitPrefix}} => 25 k
- {{25000 | ngeoUnitPrefix:'m'}} => 25 km
- {{25000000 | ngeoUnitPrefix:'m²':'square'}} => 25 km²
- {{2048 | ngeoUnitPrefix:'o':'binary'}} => 2 Kio</code></pre>
+    <p>Application abstract controller.</p>
+<p>This file includes <code>goog.require</code> for base components/directives used
+by the HTML page and the controller to provide the configuration.</p>
 </div>
 
 
@@ -96,12 +87,12 @@
 
         <tr>
             
-                <td class="name"><code>$filter</code></td>
+                <td class="name"><code>config</code></td>
             
 
             <td class="type">
             
-                <a href="angular.$filter.html">angular.$filter</a>
+                <a href="gmfx.Config.html">gmfx.Config</a>
             
             </td>
 
@@ -109,7 +100,47 @@
 
             
 
-            <td class="description last"><p>Angular filter</p></td>
+            <td class="description last"><p>A part of the application config.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>$scope</code></td>
+            
+
+            <td class="type">
+            
+                <a href="angular.Scope.html">angular.Scope</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Scope.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>$injector</code></td>
+            
+
+            <td class="type">
+            
+                <a href="angular.$injector.html">angular.$injector</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Main injector.</p></td>
         </tr>
 
     
@@ -152,7 +183,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/src/misc/filters.js#L143">src/misc/filters.js:143</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L48">contribs/gmf/src/controllers/AbstractAppController.js:48</a>
     </div>
     
 
@@ -175,19 +206,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-
-    <a href="ngeox.unitPrefix.html">ngeox.unitPrefix</a>
-
-
-    <p>Function used to format number into a string.</p>
-
-</div>
-
-    
 
 
 
@@ -205,6 +223,2312 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="$scope"><span class="type-signature"></span>$scope<span class="type-signature">: <a href="https://docs.angularjs.org/guide/scope">angular.Scope</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L338">contribs/gmf/src/controllers/AbstractAppController.js:338</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="defaultLang"><span class="type-signature"></span>defaultLang<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Default language</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L350">contribs/gmf/src/controllers/AbstractAppController.js:350</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="dimensions"><span class="type-signature">(non-null) </span>dimensions<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>:<a href="-_.html"></a>.&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L165">contribs/gmf/src/controllers/AbstractAppController.js:165</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowContent"><span class="type-signature">(nullable) </span>displaywindowContent<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L548">contribs/gmf/src/controllers/AbstractAppController.js:548</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowDraggableContainment"><span class="type-signature"></span>displaywindowDraggableContainment<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L554">contribs/gmf/src/controllers/AbstractAppController.js:554</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowHeight"><span class="type-signature">(nullable) </span>displaywindowHeight<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L560">contribs/gmf/src/controllers/AbstractAppController.js:560</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowOpen"><span class="type-signature"></span>displaywindowOpen<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L566">contribs/gmf/src/controllers/AbstractAppController.js:566</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowTitle"><span class="type-signature">(nullable) </span>displaywindowTitle<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L572">contribs/gmf/src/controllers/AbstractAppController.js:572</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowUrl"><span class="type-signature">(nullable) </span>displaywindowUrl<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L578">contribs/gmf/src/controllers/AbstractAppController.js:578</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="displaywindowWidth"><span class="type-signature">(nullable) </span>displaywindowWidth<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L584">contribs/gmf/src/controllers/AbstractAppController.js:584</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="drawFeatureActive"><span class="type-signature"></span>drawFeatureActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L299">contribs/gmf/src/controllers/AbstractAppController.js:299</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="drawProfilePanelActive"><span class="type-signature"></span>drawProfilePanelActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L305">contribs/gmf/src/controllers/AbstractAppController.js:305</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="filterSelectorActive"><span class="type-signature"></span>filterSelectorActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L236">contribs/gmf/src/controllers/AbstractAppController.js:236</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="getBrowserLanguage"><span class="type-signature"></span>getBrowserLanguage<span class="type-signature">: <a href="ngeox.html#miscGetBrowserLanguage">ngeox.miscGetBrowserLanguage</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L323">contribs/gmf/src/controllers/AbstractAppController.js:323</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gettextCatalog"><span class="type-signature"></span>gettextCatalog<span class="type-signature">: <a href="https://angular-gettext.rocketeer.be/dev-guide/api/angular-gettext/">angularGettext.Catalog</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The gettext catalog</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L362">contribs/gmf/src/controllers/AbstractAppController.js:362</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gmfThemeManager"><span class="type-signature"></span>gmfThemeManager<span class="type-signature">: <a href="gmf.theme.Manager.html">gmf.theme.Manager</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L73">contribs/gmf/src/controllers/AbstractAppController.js:73</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gmfUser"><span class="type-signature"></span>gmfUser<span class="type-signature">: <a href="gmfx.html#User">gmfx.User</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L311">contribs/gmf/src/controllers/AbstractAppController.js:311</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="hasEditableLayers"><span class="type-signature"></span>hasEditableLayers<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L105">contribs/gmf/src/controllers/AbstractAppController.js:105</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="lang"><span class="type-signature"></span>lang<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L344">contribs/gmf/src/controllers/AbstractAppController.js:344</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="langUrls"><span class="type-signature">(non-null) </span>langUrls<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>:<a href="-_.html"></a>.&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>:<a href="-_.html"></a>></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Languages URL</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L356">contribs/gmf/src/controllers/AbstractAppController.js:356</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="leftNavVisible"><span class="type-signature"></span>leftNavVisible<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L206">contribs/gmf/src/controllers/AbstractAppController.js:206</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="manageResize"><span class="type-signature"></span>manageResize<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Whether to update the size of the map on browser window resize.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L512">contribs/gmf/src/controllers/AbstractAppController.js:512</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="mapToolsGroup"><span class="type-signature"></span>mapToolsGroup<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L372">contribs/gmf/src/controllers/AbstractAppController.js:372</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="measureLengthActive"><span class="type-signature"></span>measureLengthActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The active state of the directive responsible of length measurements.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L293">contribs/gmf/src/controllers/AbstractAppController.js:293</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="measurePointActive"><span class="type-signature"></span>measurePointActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The active state of the directive responsible of point measurements.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L286">contribs/gmf/src/controllers/AbstractAppController.js:286</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ngeoLocation"><span class="type-signature"></span>ngeoLocation<span class="type-signature">: <a href="ngeo.statemanager.Location.html">ngeo.statemanager.Location</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Location service</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L54">contribs/gmf/src/controllers/AbstractAppController.js:54</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="printActive"><span class="type-signature"></span>printActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L262">contribs/gmf/src/controllers/AbstractAppController.js:262</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="printPanelActive"><span class="type-signature"></span>printPanelActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L256">contribs/gmf/src/controllers/AbstractAppController.js:256</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="queryActive"><span class="type-signature"></span>queryActive<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The active state of the ngeo query directive.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L243">contribs/gmf/src/controllers/AbstractAppController.js:243</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="queryAutoClear"><span class="type-signature"></span>queryAutoClear<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Set the clearing of the ngeoQuery after the deactivation of the query</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L250">contribs/gmf/src/controllers/AbstractAppController.js:250</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="queryFeatureStyle"><span class="type-signature"></span>queryFeatureStyle<span class="type-signature">: <a href="http://openlayers.org/en/master/apidoc/ol.style.Style.html">ol.style.Style</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>FeatureStyle used by the gmf.query.windowComponent</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L222">contribs/gmf/src/controllers/AbstractAppController.js:222</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="resizeTransition"><span class="type-signature"></span>resizeTransition<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>|<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The duration (milliseconds) of the animation that may occur on the div
+containing the map. Used to smoothly resize the map while the animation
+is in progress.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L521">contribs/gmf/src/controllers/AbstractAppController.js:521</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="rightNavVisible"><span class="type-signature"></span>rightNavVisible<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L212">contribs/gmf/src/controllers/AbstractAppController.js:212</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="searchDatasources"><span class="type-signature"></span>searchDatasources<span class="type-signature">: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>:<a href="-_.html"></a>.&lt;<a href="gmfx.html#SearchComponentDatasource">gmfx.SearchComponentDatasource</a>:<a href="-_.html"></a>></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L153">contribs/gmf/src/controllers/AbstractAppController.js:153</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="stateManager"><span class="type-signature"></span>stateManager<span class="type-signature">: <a href="ngeo.statemanager.Service.html">ngeo.statemanager.Service</a></span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L328">contribs/gmf/src/controllers/AbstractAppController.js:328</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="tmhDynamicLocale"><span class="type-signature"></span>tmhDynamicLocale<span class="type-signature">: tmhDynamicLocale</span> </h4>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L333">contribs/gmf/src/controllers/AbstractAppController.js:333</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~gmfAuthentication"><span class="type-signature">(inner, constant) </span>gmfAuthentication<span class="type-signature">: <a href="gmf.authentication.Service.html">gmf.authentication.Service</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Authentication service</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L99">contribs/gmf/src/controllers/AbstractAppController.js:99</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~ngeoFeatureHelper"><span class="type-signature">(inner, constant) </span>ngeoFeatureHelper<span class="type-signature">: <a href="ngeo.misc.FeatureHelper.html">ngeo.misc.FeatureHelper</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>Ngeo FeatureHelper service</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L66">contribs/gmf/src/controllers/AbstractAppController.js:66</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~ngeoFeatureOverlayMgr"><span class="type-signature">(inner, constant) </span>ngeoFeatureOverlayMgr<span class="type-signature">: <a href="ngeo.map.FeatureOverlayMgr.html">ngeo.map.FeatureOverlayMgr</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The ngeo feature overlay manager service</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L378">contribs/gmf/src/controllers/AbstractAppController.js:378</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~ngeoToolActivateMgr"><span class="type-signature">(inner, constant) </span>ngeoToolActivateMgr<span class="type-signature">: <a href="ngeo.misc.ToolActivateMgr.html">ngeo.misc.ToolActivateMgr</a></span> </h4>
+
+
+
+
+<div class="description">
+    <p>The ngeo ToolActivate manager service.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L385">contribs/gmf/src/controllers/AbstractAppController.js:385</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -214,7 +2538,7 @@
 
     
 
-    <h4 class="name" id="~result"><span class="type-signature">(inner) </span>result<span class="signature">(number, [opt_unit]<span class="signature-attributes">opt</span>, [opt_type]<span class="signature-attributes">opt</span>, [opt_precision]<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".getLayerByLabels"><span class="type-signature">(static) </span>getLayerByLabels<span class="signature">(layers, labels)</span><span class="type-signature"></span></h4>
 
     
 
@@ -241,8 +2565,6 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
         
 
@@ -255,118 +2577,40 @@
 
         <tr>
             
-                <td class="name"><code>number</code></td>
+                <td class="name"><code>layers</code></td>
             
 
             <td class="type">
             
-                number
+                <a href="Array.<ol.layer.Base>.html">Array.<ol.layer.Base></a>
             
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>The number to format.</p></td>
+            <td class="description last"><p>Layers list.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>[opt_unit]</code></td>
+                <td class="name"><code>labels</code></td>
             
 
             <td class="type">
             
-                <a href="string=.html">string=</a>
+                <a href="Array.<string>.html">Array.<string></a>
             
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>The unit to used, default is ''.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>[opt_type]</code></td>
-            
-
-            <td class="type">
-            
-                <a href="string=.html">string=</a>
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>(unit|square|binary) the type of units, default is 'unit'.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>[opt_precision]</code></td>
-            
-
-            <td class="type">
-            
-                <a href="number=.html">number=</a>
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>The used precision, default is 3.</p></td>
+            <td class="description last"><p>default_basemap list.</p></td>
         </tr>
 
     
@@ -409,7 +2653,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/src/misc/filters.js#L154">src/misc/filters.js:154</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L593">contribs/gmf/src/controllers/AbstractAppController.js:593</a>
     </div>
     
 
@@ -437,14 +2681,439 @@
         
 <div class="param-desc">
 
-    string
+    <a href="ol.layer.Base.html">ol.layer.Base</a>
 
 
-    <p>The formatted string.</p>
+    <p>layer or null</p>
 
 </div>
 
     
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getLocationIcon"><span class="type-signature">(protected) </span>getLocationIcon<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L697">contribs/gmf/src/controllers/AbstractAppController.js:697</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+
+    <a href="Element.html">Element</a>
+
+
+    <p>Span element with font-awesome inside of it</p>
+
+</div>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="initLanguage"><span class="type-signature"></span>initLanguage<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L616">contribs/gmf/src/controllers/AbstractAppController.js:616</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="switchLanguage"><span class="type-signature"></span>switchLanguage<span class="signature">(lang)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lang</code></td>
+            
+
+            <td class="type">
+            
+                string
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Language code.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L605">contribs/gmf/src/controllers/AbstractAppController.js:605</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~userChange"><span class="type-signature">(inner) </span>userChange<span class="signature">(evt)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>evt</code></td>
+            
+
+            <td class="type">
+            
+                <a href="gmfx.AuthenticationEvent.html">gmfx.AuthenticationEvent</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Event.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/cleanup_eslintrc_files/contribs/gmf/src/controllers/AbstractAppController.js#L119">contribs/gmf/src/controllers/AbstractAppController.js:119</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
