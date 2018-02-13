@@ -306,13 +306,13 @@
     <script src="../../../../lib/watchwatchers.js"></script>
     <script>
       (function() {
-        var cacheVersion = 'bc173adb9aad83d1089493036798ad77e902d729';
+        var cacheVersion = 'd9b727b17a6283c616433c3824f87d7bc095ac7d';
         var urlElements = window.location.pathname.split('/');
 
         var angularLocaleScriptUrlElements = urlElements.slice(0, urlElements.length - 3);
         angularLocaleScriptUrlElements.push('build', 'angular-locale_{{locale}}.js?cache_version=' + cacheVersion);
 
-        var gmfModule = angular.module('gmfDefaultConfig');
+        var gmfModule = angular.module('GmfAbstractAppControllerModule');
         gmfModule.constant('angularLocaleScript', angularLocaleScriptUrlElements.join('/'));
 
         var langUrls = {};
