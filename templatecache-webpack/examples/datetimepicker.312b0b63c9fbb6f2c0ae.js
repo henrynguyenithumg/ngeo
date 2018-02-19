@@ -1,0 +1,2 @@
+webpackJsonp([37],{413:function(e,t,o){o(7),e.exports=o(414)},414:function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),o(415),o(8);var n,l=o(265),a=(n=l)&&n.__esModule?n:{default:n};var r={};r.module=angular.module("app",[a.default.name]),r.MainController=function(){this.date="2018-01-01",this.time="12:00:00",this.datetime="2018-01-01 12:00:00"},r.module.controller("MainController",r.MainController),t.default=r},415:function(e,t){}},[413]);
+//# sourceMappingURL=datetimepicker.312b0b63c9fbb6f2c0ae.js.map
