@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{mainCtrl.lang}}" ng-app="app" ng-controller="AlternativeDesktopController as mainCtrl">
+<html lang="{{mainCtrl.lang}}" ng-app="AppDesktopAlt" ng-controller="AlternativeDesktopController as mainCtrl">
   <head>
     <title ng-bind-template="{{'Alternative Desktop Application'|translate}}">GeoMapFish</title>
     <meta charset="utf-8">
@@ -346,7 +346,7 @@
     <script src="../../../../lib/watchwatchers.js"></script>
     <script>
       (function() {
-        var cacheVersion = '09459d02b9909bb54c23e7684c6220df02aaf4a8';
+        var cacheVersion = '3a73569beb16e8b34aae1d40cc5592976a58cc22';
         var urlElements = window.location.pathname.split('/');
 
         var angularLocaleScriptUrlElements = urlElements.slice(0, urlElements.length - 3);
@@ -362,7 +362,7 @@
           langUrls[lang] = langUrlElements.join('/')
         });
 
-        var module = angular.module('app');
+        var module = angular.module('AppDesktopAlt');
         module.constant('defaultTheme', 'Demo');
         module.constant('defaultLang', 'en');
         module.constant('langUrls', langUrls);
