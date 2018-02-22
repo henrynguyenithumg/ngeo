@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{mainCtrl.lang}}" ng-app="AppMobile" ng-controller="MobileController as mainCtrl">
+<html lang="{{mainCtrl.lang}}" ng-app="AppMobileAlt" ng-controller="AlternativeMobileController as mainCtrl">
   <head>
-    <title ng-bind-template="{{'Mobile Application'|translate}}">GeoMapFish</title>
+    <title ng-bind-template="{{'Alternative Mobile Application'|translate}}">GeoMapFish</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="image/favicon.ico"/>
-    <link rel="stylesheet" href="../../build/mobile.css">
+    <link rel="stylesheet" href="../../build/mobile_alt.css">
     <script>
       if (!window.requestAnimationFrame) {
         alert('Your browser is not supported, please update it or use another one. You will be redirected.\n\n'
@@ -37,6 +37,7 @@
         gmf-mobile-measurelength
         gmf-mobile-measurelength-active="mainCtrl.measureLengthActive"
         gmf-mobile-measurelength-precision="2"
+        gmf-mobile-measurelength-sketchstyle="::mainCtrl.customMeasureStyle"
         gmf-mobile-measurelength-map="::mainCtrl.map">
       </div>
       <div
@@ -45,17 +46,19 @@
         gmf-mobile-measurepoint-active="mainCtrl.measurePointActive"
         gmf-mobile-measurepoint-coordinateDecimals="2"
         gmf-mobile-measurepoint-layersconfig="::mainCtrl.elevationLayersConfig"
-        gmf-mobile-measurepoint-map="::mainCtrl.map">
+        gmf-mobile-measurepoint-map="::mainCtrl.map"
+        gmf-mobile-measurepoint-sketchstyle="::mainCtrl.customMeasureStyle"
+        gmf-mobile-measurepoint-format="'{x} / {y}'">
       </div>
       <button class="gmf-mobile-nav-trigger gmf-mobile-nav-left-trigger"
         ng-click="mainCtrl.toggleLeftNavVisibility()">
         <span class="gmf-icon gmf-icon-layers"></span>
       </button>
-      <gmf-search gmf-search-map="::mainCtrl.map"
-        gmf-search-datasources="::mainCtrl.searchDatasources"
-        gmf-search-clearbutton="::true"
+      <gmf-search gmf-search-map="mainCtrl.map"
+        gmf-search-datasources="mainCtrl.searchDatasources"
+        gmf-search-clearbutton="true"
         gmf-search-placeholder="{{'Search…'|translate}}"
-        gmf-search-coordinatesprojections="::mainCtrl.searchCoordinatesProjections"
+        gmf-search-coordinatesprojections="mainCtrl.searchCoordinatesProjections"
         gmf-search-listeners="::mainCtrl.searchListeners"
         gmf-search-delay="mainCtrl.searchDelay">
       </gmf-search>
@@ -109,7 +112,7 @@
         <gmf-layertree
           gmf-layertree-dimensions="mainCtrl.dimensions"
           gmf-layertree-map="::mainCtrl.map"
-          gmf-layertree-openlinksinnewwindow="::true">
+          gmf-layertree-openlinksinnewwindow="true">
         </gmf-layertree>
       </div>
       <gmf-backgroundlayerselector
@@ -168,7 +171,7 @@
         gmf-mobile-nav-back="authCtrl.gmfUser.username !== null">
       </gmf-authentication>
     </nav>
-    <script src="../../build/mobile.js"></script>
+    <script src="../../build/mobile_alt.js"></script>
     <script src="../../../../lib/watchwatchers.js"></script>
     <script>
       (function() {
@@ -188,7 +191,7 @@
           langUrls[lang] = langUrlElements.join('/')
         });
 
-        var module = angular.module('AppMobile');
+        var module = angular.module('AppMobileAlt');
         module.constant('defaultTheme', 'Demo');
         module.constant('defaultLang', 'en');
         module.constant('langUrls', langUrls);
@@ -202,6 +205,7 @@
         module.constant('gmfSearchGroups', []);
         // Requires that the gmfSearchGroups is specified
         module.constant('gmfSearchActions', []);
+        module.constant('gmfTreeManagerModeFlush', false);
         module.value('ngeoWfsPermalinkOptions',
             /** @type {ngeox.WfsPermalinkOptions} */ ({
               url: 'https://geomapfish-demo.camptocamp.net/2.2/wsgi/mapserv_proxy',
