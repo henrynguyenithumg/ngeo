@@ -21,8 +21,23 @@
       </div>
       <hr>
       <div>
+        <a href="apps/mobile_alt/index.html"><b>Alternate mobile application</b></a>
+        <p>An alternate mobile example application for GeoMapFish.</p>
+      </div>
+      <hr>
+      <div>
         <a href="apps/desktop_alt/index.html"><b>Alternate desktop application</b></a>
         <p>An alternate desktop example application for GeoMapFish.</p>
+      </div>
+      <hr>
+      <div>
+        <a href="apps/oeview/index.html"><b>Object editing viewer</b></a>
+        <p>An example application for viewing an object.</p>
+      </div>
+      <hr>
+      <div>
+        <a href="apps/oeedit/index.html"><b>Object editing editor</b></a>
+        <p>An example application for editing an object.</p>
       </div>
       <hr>
       <div>
@@ -61,15 +76,17 @@
         <a href="displayquerywindow.html">GeoMapFish Map Query example</a>
         <p>
       This example shows how to use the <code>ngeo-map-query</code>
-      directive in combination with the <code>gmf.QueryManager</code>.
-      The QueryManager fetches the themes returned by the theme service and
-      adds one source to the query service per layer definition found. In this
-      example, the layer tree is responsible of creating the layer. You can
-      switch theme and turn on/off layers to see the impact it has on results
-      returned by the query service.
-      To display results, this example use the <code>gmf-displayquerywindow
-      </code> component. Here, this last directive uses a custom style to
-      display all selected features.</p>
+      directive in combination with the
+      <code>gmf.datasource.Manager</code>.
+      The DataSourcesManager fetches the themes returned by the theme
+      service and adds one DataSource, which is used by the querent service
+      per layer definition found. In this example, the layer tree is
+      responsible of creating the layer. You can switch theme and turn
+      on/off layers to see the impact it has on results returned by the
+      query service.  To display results, this example use the
+      <code>gmf-displayquerywindow </code> component. Here, this last
+      directive uses a custom style to display all selected features.
+    </p>
       </div>
       <hr>
       <div>
@@ -84,7 +101,7 @@
       <div>
         <a href="editfeature.html">EditFeature GeoMapFish example</a>
         <p>
-      This example shows how to use the <code>gmf.EditFeature</code>
+      This example shows how to use the <code>gmf.editing.EditFeature</code>
       service to insert, update and delete features from a layer using
       a GeoMapFish server. First, you must log in. Then, you can either
       click on the <em>Insert</em> button to insert a random feature, or
@@ -117,6 +134,24 @@
       directive to style a vector feature. Click on a feature to show the
       directive.
     </p>
+      </div>
+      <hr>
+      <div>
+        <a href="filterselector.html">GeoMapFish Filter selector example</a>
+        <p>
+        This example shows how to use the <code>gmf-filterselector</code>
+        directive to apply filters on the layers on the map.
+      </p>
+      </div>
+      <hr>
+      <div>
+        <a href="importdatasource.html">GeoMapFish Import DataSource example</a>
+        <p>
+        This example shows how to use the <code>gmf-importdatasource</code>
+        component, which allows the addition of external WMS/WMTS layers
+        in the map. It also supports the addition of files, such as
+        KML and GPX.
+      </p>
       </div>
       <hr>
       <div>
@@ -193,8 +228,8 @@
       <div>
         <a href="print.html">GeoMapFish Print example</a>
         <p>
-      This example shows how to use the <code>gmf.printDirective</code>.
-      Directive that generates fields and manages tools to print with a
+      This example shows how to use the <code>gmf.print.component</code>.
+      Component that generates layout information and manages tools to print with a
       MapFishPrint v3.
     </p>
       </div>
@@ -273,7 +308,7 @@
       <div>
         <a href="xsdattributes.html">XSD Attributes in GeoMapFish example</a>
         <p>
-            This example shows how to use the <code>gmf.XSDAttributes</code>
+            This example shows how to use the <code>gmf.editing.XSDAttributes</code>
             service, which is used to obtain the attributes from a GeoMapFish
             server using a given layer id. The attributes received are read
             and transformed into a form using the <code>ngeo-attributes</code>
