@@ -42,7 +42,7 @@
 
     
 
-    <h4 class="name" id="LayerHelper"><span class="type-signature"></span>new LayerHelper<span class="signature">($q, $http)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="LayerHelper"><span class="type-signature"></span>new LayerHelper<span class="signature">($q, $http, ngeoTilesPreloadingLimit)</span><span class="type-signature"></span></h4>
 
     
 
@@ -122,6 +122,28 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>ngeoTilesPreloadingLimit</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Load tiles up to preload levels. By default preload is Infinity,
+    which means load all tiles on the top of the visible level. See also preload value
+    in documentation for ol.Layer.Tile.</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -161,7 +183,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L27">src/services/layerHelper.js:27</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L30">src/services/layerHelper.js:30</a>
     </div>
     
 
@@ -243,7 +265,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L46">src/services/layerHelper.js:46</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L56">src/services/layerHelper.js:56</a>
     </div>
     
 
@@ -299,7 +321,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L52">src/services/layerHelper.js:52</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L62">src/services/layerHelper.js:62</a>
     </div>
     
 
@@ -439,7 +461,7 @@ returned Group.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L158">src/services/layerHelper.js:158</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L170">src/services/layerHelper.js:170</a>
     </div>
     
 
@@ -770,7 +792,7 @@ separated layers names (see <a href="http://openlayers.org/en/master/apidoc/ol.s
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L70">src/services/layerHelper.js:70</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L80">src/services/layerHelper.js:80</a>
     </div>
     
 
@@ -1016,7 +1038,7 @@ as key 'capabilitiesStyles' as param of the new layer.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L115">src/services/layerHelper.js:115</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L125">src/services/layerHelper.js:125</a>
     </div>
     
 
@@ -1161,7 +1183,7 @@ of others groups.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L204">src/services/layerHelper.js:204</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L216">src/services/layerHelper.js:216</a>
     </div>
     
 
@@ -1327,7 +1349,7 @@ the map.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L177">src/services/layerHelper.js:177</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L189">src/services/layerHelper.js:189</a>
     </div>
     
 
@@ -1492,7 +1514,7 @@ layers contained in that group are searched as well.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L241">src/services/layerHelper.js:241</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L253">src/services/layerHelper.js:253</a>
     </div>
     
 
@@ -1733,7 +1755,7 @@ layers contained in that group are searched as well.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L287">src/services/layerHelper.js:287</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L299">src/services/layerHelper.js:299</a>
     </div>
     
 
@@ -1877,7 +1899,7 @@ ngeo layerHelper service.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L264">src/services/layerHelper.js:264</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L276">src/services/layerHelper.js:276</a>
     </div>
     
 
@@ -2040,7 +2062,7 @@ ngeo layerHelper service.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L316">src/services/layerHelper.js:316</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L328">src/services/layerHelper.js:328</a>
     </div>
     
 
@@ -2183,7 +2205,7 @@ ngeo layerHelper service.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L331">src/services/layerHelper.js:331</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L343">src/services/layerHelper.js:343</a>
     </div>
     
 
@@ -2384,7 +2406,7 @@ in a ISO-8601 string datetime or time interval format</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L354">src/services/layerHelper.js:354</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/layerHelper.js#L366">src/services/layerHelper.js:366</a>
     </div>
     
 
