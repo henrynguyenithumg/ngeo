@@ -42,7 +42,7 @@
 
     
 
-    <h4 class="name" id="BackgroundLayerMgr"><span class="type-signature"></span>new BackgroundLayerMgr<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="BackgroundLayerMgr"><span class="type-signature"></span>new BackgroundLayerMgr<span class="signature">(ngeoLayerHelper)</span><span class="type-signature"></span></h4>
 
     
 
@@ -82,6 +82,52 @@ layer changes:</p>
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ngeoLayerHelper</code></td>
+            
+
+            <td class="type">
+            
+                <a href="ngeo.LayerHelper.html">ngeo.LayerHelper</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Themes service.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
 
 
 
@@ -117,7 +163,7 @@ layer changes:</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L97">src/services/backgroundlayermgr.js:97</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L100">src/services/backgroundlayermgr.js:100</a>
     </div>
     
 
@@ -277,7 +323,7 @@ the map does not have a background layer.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L118">src/services/backgroundlayermgr.js:118</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L127">src/services/backgroundlayermgr.js:127</a>
     </div>
     
 
@@ -309,6 +355,150 @@ the map does not have a background layer.</p>
 
 
     <p>layer The background layer.</p>
+
+</div>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="getOpacityBgLayer"><span class="type-signature"></span>getOpacityBgLayer<span class="signature">(map)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Return the current background layer overlay of a given map, used by the opacity slider.
+<code>null</code> is returned if the map does not have an opacity background layer.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>map</code></td>
+            
+
+            <td class="type">
+            
+                <a href="ol.Map.html">ol.Map</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Map.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L175">src/services/backgroundlayermgr.js:175</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+
+    <a href="ol.layer.Base.html">ol.layer.Base</a>
+
+
+    <p>layer The opacity background layer.</p>
 
 </div>
 
@@ -441,7 +631,7 @@ is removed.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L132">src/services/backgroundlayermgr.js:132</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L141">src/services/backgroundlayermgr.js:141</a>
     </div>
     
 
@@ -477,6 +667,156 @@ is removed.</p>
 </div>
 
     
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setOpacityBgLayer"><span class="type-signature"></span>setOpacityBgLayer<span class="signature">(map, layer)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Set an background layer overlay, used by the opacity slider.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>map</code></td>
+            
+
+            <td class="type">
+            
+                <a href="ol.Map.html">ol.Map</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The map.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>layer</code></td>
+            
+
+            <td class="type">
+            
+                <a href="ol.layer.Base.html">ol.layer.Base</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The opacity background layer.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L185">src/services/backgroundlayermgr.js:185</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -600,7 +940,7 @@ is removed.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L158">src/services/backgroundlayermgr.js:158</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/2.2/src/services/backgroundlayermgr.js#L202">src/services/backgroundlayermgr.js:202</a>
     </div>
     
 
