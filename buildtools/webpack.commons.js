@@ -134,6 +134,7 @@ const config = {
       'moment': 'moment/src/moment.js',
       'ol/ol.css': 'openlayers/css/ol.css',
       'ol': 'openlayers/src/ol',
+      'goog': 'olcs/goog/',
       // For angular-ui-date
       'jquery-ui/datepicker' : 'jquery-ui/ui/widgets/datepicker',
       'jquery-ui' : 'jquery-ui/ui',
