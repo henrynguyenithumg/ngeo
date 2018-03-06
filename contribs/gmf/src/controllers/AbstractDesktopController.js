@@ -30,6 +30,13 @@ goog.require('ol.style.Stroke');
 goog.require('ol.style.Style');
 goog.require('ol.style.Text');
 
+/** @suppress {extraRequire} */
+goog.require('ngeo.routingComponent');
+/** @suppress {extraRequire} */
+goog.require('ngeo.routingFeatureComponent');
+/** @suppress {extraRequire} */
+goog.require('ngeo.nominatimInputComponent');
+
 
 /**
  * Desktop application abstract controller.
@@ -107,6 +114,12 @@ gmf.controllers.AbstractDesktopController = function(config, $scope, $injector) 
    * @export
    */
   this.editFeatureActive = false;
+
+  /**
+   * @type {boolean}
+   * @export
+   */
+  this.routingfeatureActive = false;
 
   /**
    * @type {boolean}

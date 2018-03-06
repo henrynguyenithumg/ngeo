@@ -1,0 +1,97 @@
+<div class="gmf-routing">
+  <div class="gmf-routing-start form-group">
+    <gmf-routing-feature
+            gmf-routing-feature-map="routeCtrl.map"
+            gmf-routing-feature-feature="routeCtrl.startFeature_"
+            gmf-routing-feature-fill-color="routeCtrl.colors['start.fill']"
+            gmf-routing-feature-stroke-color="routeCtrl.colors['start.stroke']"
+            gmf-routing-feature-on-change="routeCtrl.handleChange"
+            gmf-routing-feature-search-default-params="routeCtrl.searchDefaultParams">
+    </gmf-routing-feature>
+  </div>
+
+    <div class="gmf-routing-vias form-group" ng-repeat="(index, via) in routeCtrl.viaArray">
+      <div class="form-inline">
+        <div class="form-group">
+          <gmf-routing-feature
+                  gmf-routing-feature-map="routeCtrl.map"
+                  gmf-routing-feature-feature="via.feature"
+                  gmf-routing-feature-fill-color="routeCtrl.colors['via.fill']"
+                  gmf-routing-feature-stroke-color="routeCtrl.colors['via.stroke']"
+                  gmf-routing-feature-on-change="routeCtrl.handleChange"
+                  gmf-routing-feature-search-default-params="routeCtrl.searchDefaultParams">
+          </gmf-routing-feature>
+        </div>
+        <button type="button" class="btn btn-primary delete-via" ng-click="routeCtrl.deleteVia(index)">
+          <span class="fa fa-trash-o"></span>
+        </button>
+      </div>
+    </div>
+
+  <div class="gmf-routing-destination form-group">
+    <gmf-routing-feature
+            gmf-routing-feature-map="routeCtrl.map"
+            gmf-routing-feature-feature="routeCtrl.targetFeature_"
+            gmf-routing-feature-fill-color="routeCtrl.colors['destination.fill']"
+            gmf-routing-feature-stroke-color="routeCtrl.colors['destination.stroke']"
+            gmf-routing-feature-on-change="routeCtrl.handleChange"
+            gmf-routing-feature-search-default-params="routeCtrl.searchDefaultParams">
+    </gmf-routing-feature>
+  </div>
+
+  <div class="form-group pull-right">
+    <button type="button" class="btn btn-primary" ng-click="routeCtrl.reverseRoute()" translate>
+      <span class="fa fa-exchange"></span> Reverse
+    </button>
+    <button type="button" class="btn btn-primary" ng-click="routeCtrl.addVia()" translate>
+      <span class="fa fa-plus"></span> Add via
+    </button>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div class="form-horizontal"
+       ng-if="routeCtrl.routingProfiles.length > 1">
+    <div class="form-group">
+      <label class="control-label col-md-4" translate>Profile</label>
+      <div class="col-md-8">
+        <select class="form-control" ng-model="routeCtrl.selectedRoutingProfile">
+          <option ng-repeat="profile in routeCtrl.routingProfiles" ng-value="profile">{{profile.label}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="gmf-routing-error form-group clearfix"
+       ng-hide="routeCtrl.errorMessage === ''">
+    {{routeCtrl.errorMessage}}
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div class="form-horizontal"
+       ng-hide="routeCtrl.routeDuration === null && routeCtrl.routeDistance === ''">
+    <div class="row">
+      <div class="col-md-12">
+        <strong translate>Route statistics</strong>
+      </div>
+    </div>
+    <div class="row" ng-hide="routeCtrl.routeDuration === null">
+      <div class="col-md-4 text-right" translate>
+        Duration
+      </div>
+      <div class="col-md-8">
+        {{routeCtrl.routeDuration}} {{'minutes' | translate}}
+      </div>
+    </div>
+
+    <div class="row" ng-hide="routeCtrl.routeDistance === ''">
+      <div class="col-md-4 text-right" translate>
+        Distance
+      </div>
+      <div class="col-md-8">
+        {{routeCtrl.routeDistance}}
+      </div>
+    </div>
+  </div>
+</div>
