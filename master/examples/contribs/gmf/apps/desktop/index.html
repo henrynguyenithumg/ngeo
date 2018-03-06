@@ -103,9 +103,7 @@
                 {{'Login' | translate}}
                 <a class="btn close" ng-click="mainCtrl.loginActive = false">&times;</a>
               </div>
-              <gmf-authentication
-                  gmf-authentication-force-password-change="::true">
-              </gmf-authentication>
+              <gmf-authentication></gmf-authentication>
             </div>
           </div>
           <div ng-show="mainCtrl.printPanelActive" class="row">
@@ -290,6 +288,21 @@
       <ngeo-modal ng-model="mainCtrl.modalShareShown">
         <gmf-share gmf-share-email="true"/>
       </ngeo-modal>
+      <ngeo-modal
+          ngeo-modal-closable="false"
+          ng-model="mainCtrl.userMustChangeItsPassword()"
+          ng-model-options="{getterSetter: true}">
+        <div class="modal-header">
+          <h4 class="modal-title">
+            {{'You must change your password' | translate}}
+          </h4>
+        </div>
+        <div class="modal-body" translate>
+          <gmf-authentication
+            gmf-authentication-force-password-change="::true">
+          </gmf-authentication>
+        </div>
+      </ngeo-modal>
     </main>
     <footer>
       <gmf-profile
@@ -306,7 +319,7 @@
     <script src="../../../../lib/watchwatchers.js"></script>
     <script>
       (function() {
-        var cacheVersion = '6efac1fc6003bad753b049479968b4bd1c89ae2c';
+        var cacheVersion = 'aae17700b767b5d2d4d3e7206ae9f4d197c1994f';
         var urlElements = window.location.pathname.split('/');
 
         var angularLocaleScriptUrlElements = urlElements.slice(0, urlElements.length - 3);

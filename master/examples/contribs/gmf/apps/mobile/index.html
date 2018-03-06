@@ -168,11 +168,27 @@
         gmf-mobile-nav-back="authCtrl.gmfUser.username !== null">
       </gmf-authentication>
     </nav>
+    <ngeo-modal
+        ngeo-modal-closable="false"
+        ng-model="mainCtrl.userMustChangeItsPassword()"
+        ng-model-options="{getterSetter: true}">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          {{'You must change your password' | translate}}
+        </h4>
+      </div>
+      <div class="modal-body" translate>
+        <gmf-authentication
+          gmf-authentication-force-password-change="::true">
+        </gmf-authentication>
+      </div>
+    </ngeo-modal>
+
     <script src="../../build/mobile.js"></script>
     <script src="../../../../lib/watchwatchers.js"></script>
     <script>
       (function() {
-        var cacheVersion = '6efac1fc6003bad753b049479968b4bd1c89ae2c';
+        var cacheVersion = 'aae17700b767b5d2d4d3e7206ae9f4d197c1994f';
         var urlElements = window.location.pathname.split('/');
 
         var angularLocaleScriptUrlElements = urlElements.slice(0, urlElements.length - 3);
