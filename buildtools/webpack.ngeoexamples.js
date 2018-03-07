@@ -6,15 +6,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const plugins = [];
 const entry = {};
 
-for (const filename of ls('examples/*.html')) {
+for (const filename of ls('examples/simple*.html')) {
   const name = filename.name;
-  entry[name] = ['ngeo/mainmodule.js', `./examples/${name}.js`];
+  entry[name] = ['./examples/common_dependencies.js', 'ngeo/mainmodule.js', `./examples/${name}.js`];
   plugins.push(
     new HtmlWebpackPlugin({
       template: `examples/${name}.html`,
       chunksSortMode: 'manual',
       filename: name + '.html',
-      chunks: ['common', name],
+      chunks: [name],
+//      chunks: ['common', name],
     }),
   );
 }
@@ -24,11 +25,11 @@ module.exports = {
     path: path.resolve(__dirname, '../.build/examples-hosted/'),
   },
   entry: entry,
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      name: 'commons',
-    }
-  },
+//   optimization: {
+//     splitChunks: {
+//       chunks: 'all',
+//       name: 'common',
+//     }
+//   },
   plugins: plugins,
 };

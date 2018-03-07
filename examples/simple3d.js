@@ -1,7 +1,6 @@
 goog.provide('app.simple3d');
 
 // webpack: import './simple3d.css';
-// webpack: import './common_dependencies.js';
 /** @suppress {extraRequire} */
 goog.require('ol.Map');
 goog.require('ol.View');
@@ -14,6 +13,7 @@ goog.require('ngeo.olcs.Manager');
 
 /** @type {!angular.Module} **/
 app.simple3d.module = angular.module('app', [
+  'gettext',
   ngeo.map.module.name,
   ngeo.olcs.olcsModule.name
 ]);
@@ -44,7 +44,10 @@ app.simple3d.MainController = function($rootScope, ngeoOlcsService) {
   });
 
   // TODO: detect and use different URL for DEBUG MODE
-  const cesiumUrl = '../node_modules/@camptocamp/cesium/Build/Cesium/Cesium.js';
+  let cesiumUrl = '../node_modules/@camptocamp/cesium/Build/Cesium/Cesium.js';
+  if (location.href.indexOf('examples-hosted') !== -1) {
+    cesiumUrl = '../' + cesiumUrl;
+  }
 
   /**
    * @export
