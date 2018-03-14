@@ -1,22 +1,21 @@
-goog.provide('gmf.backgroundlayerselector.component');
-
-goog.require('gmf'); // nowebpack
-goog.require('goog.asserts');
-goog.require('gmf.theme.Themes');
-goog.require('ngeo.map.BackgroundLayerMgr');
-goog.require('ol.events');
-
+/**
+ * @module gmf.backgroundlayerselector.component
+ */
+import googAsserts from 'goog/asserts.js';
+import gmfThemeThemes from 'gmf/theme/Themes.js';
+import ngeoMapBackgroundLayerMgr from 'ngeo/map/BackgroundLayerMgr.js';
+import * as olEvents from 'ol/events.js';
 
 /**
  * @type {!angular.Module}
  */
-gmf.backgroundlayerselector.component = angular.module('gmfBackgroundlayerselector', [
-  gmf.theme.Themes.module.name,
-  ngeo.map.BackgroundLayerMgr.module.name,
+const exports = angular.module('gmfBackgroundlayerselector', [
+  gmfThemeThemes.module.name,
+  ngeoMapBackgroundLayerMgr.module.name,
 ]);
 
 
-gmf.backgroundlayerselector.component.value('gmfBackgroundlayerselectorTemplateUrl',
+exports.value('gmfBackgroundlayerselectorTemplateUrl',
   /**
    * @param {!angular.JQLite} $element Element.
    * @param {!angular.Attributes} $attrs Attributes.
@@ -25,15 +24,14 @@ gmf.backgroundlayerselector.component.value('gmfBackgroundlayerselectorTemplateU
   ($element, $attrs) => {
     const templateUrl = $attrs['gmfBackgroundlayerselectorTemplateurl'];
     return templateUrl !== undefined ? templateUrl :
-      `${gmf.baseModuleTemplateUrl}/backgroundlayerselector/component.html`; // nowebpack
-    // webpack: 'gmf/backgroundlayerselector';
+      'gmf/backgroundlayerselector';
   }
 );
 
 
-// webpack: exports.run(/* @ngInject */ ($templateCache) => {
-// webpack:   $templateCache.put('gmf/backgroundlayerselector', require('./component.html'));
-// webpack: })
+exports.run(/* @ngInject */ ($templateCache) => {
+  $templateCache.put('gmf/backgroundlayerselector', require('./component.html'));
+});
 
 
 /**
@@ -72,7 +70,7 @@ function gmfBackgroundlayerselectorTemplateUrl($element, $attrs, gmfBackgroundla
  * @ngdoc component
  * @ngname gmfBackgroundlayerselector
  */
-gmf.backgroundlayerselector.component.component_ = {
+exports.component_ = {
   controller: 'GmfBackgroundlayerselectorController as ctrl',
   bindings: {
     'dimensions': '=gmfBackgroundlayerselectorDimensions',
@@ -83,8 +81,8 @@ gmf.backgroundlayerselector.component.component_ = {
 };
 
 
-gmf.backgroundlayerselector.component.component('gmfBackgroundlayerselector',
-  gmf.backgroundlayerselector.component.component_);
+exports.component('gmfBackgroundlayerselector',
+  exports.component_);
 
 
 /**
@@ -98,7 +96,7 @@ gmf.backgroundlayerselector.component.component('gmfBackgroundlayerselector',
  * @ngdoc controller
  * @ngname GmfBackgroundlayerselectorController
  */
-gmf.backgroundlayerselector.component.Controller_ = function($scope, ngeoBackgroundLayerMgr, gmfThemes) {
+exports.Controller_ = function($scope, ngeoBackgroundLayerMgr, gmfThemes) {
 
   /**
    * @type {!Object.<string, string>}
@@ -143,7 +141,7 @@ gmf.backgroundlayerselector.component.Controller_ = function($scope, ngeoBackgro
    */
   this.listenerKeys_ = [];
 
-  this.listenerKeys_.push(ol.events.listen(gmfThemes, 'change', this.handleThemesChange_, this));
+  this.listenerKeys_.push(olEvents.listen(gmfThemes, 'change', this.handleThemesChange_, this));
 
   /**
    * @type {!ngeo.map.BackgroundLayerMgr}
@@ -151,7 +149,7 @@ gmf.backgroundlayerselector.component.Controller_ = function($scope, ngeoBackgro
    */
   this.backgroundLayerMgr_ = ngeoBackgroundLayerMgr;
 
-  this.listenerKeys_.push(ol.events.listen(this.backgroundLayerMgr_, 'change',
+  this.listenerKeys_.push(olEvents.listen(this.backgroundLayerMgr_, 'change',
     /**
      * @param {!ngeox.BackgroundEvent} event Event.
      */
@@ -166,8 +164,8 @@ gmf.backgroundlayerselector.component.Controller_ = function($scope, ngeoBackgro
 /**
  * Initialise the controller.
  */
-gmf.backgroundlayerselector.component.Controller_.prototype.$onInit = function() {
-  goog.asserts.assert(this.dimensions, 'The dimensions object is required');
+exports.Controller_.prototype.$onInit = function() {
+  googAsserts.assert(this.dimensions, 'The dimensions object is required');
   this.handleThemesChange_();
 };
 
@@ -176,7 +174,7 @@ gmf.backgroundlayerselector.component.Controller_.prototype.$onInit = function()
  * Called when the themes changes. Set (or reset) the backround layers.
  * @private
  */
-gmf.backgroundlayerselector.component.Controller_.prototype.handleThemesChange_ = function() {
+exports.Controller_.prototype.handleThemesChange_ = function() {
   this.gmfThemes_.getBgLayers().then((layers) => {
     this.bgLayers = layers;
   });
@@ -188,7 +186,7 @@ gmf.backgroundlayerselector.component.Controller_.prototype.handleThemesChange_ 
  * @param {boolean=} opt_silent Do not notify listeners.
  * @export
  */
-gmf.backgroundlayerselector.component.Controller_.prototype.setLayer = function(layer, opt_silent) {
+exports.Controller_.prototype.setLayer = function(layer, opt_silent) {
   this.bgLayer = layer;
   this.backgroundLayerMgr_.set(this.map, layer);
   if (!opt_silent && this.select) {
@@ -200,11 +198,14 @@ gmf.backgroundlayerselector.component.Controller_.prototype.setLayer = function(
 /**
  * @private
  */
-gmf.backgroundlayerselector.component.Controller_.prototype.handleDestroy_ = function() {
-  this.listenerKeys_.forEach(ol.events.unlistenByKey);
+exports.Controller_.prototype.handleDestroy_ = function() {
+  this.listenerKeys_.forEach(olEvents.unlistenByKey);
   this.listenerKeys_.length = 0;
 };
 
 
-gmf.backgroundlayerselector.component.controller('GmfBackgroundlayerselectorController',
-  gmf.backgroundlayerselector.component.Controller_);
+exports.controller('GmfBackgroundlayerselectorController',
+  exports.Controller_);
+
+
+export default exports;

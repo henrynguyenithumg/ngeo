@@ -1,18 +1,17 @@
-goog.provide('ngeo.layertree.component');
-
-goog.require('ngeo'); // nowebpack
-goog.require('ngeo.layertree.Controller');
-
+/**
+ * @module ngeo.layertree.component
+ */
+import ngeoLayertreeController from 'ngeo/layertree/Controller.js';
 
 /**
  * @type {!angular.Module}
  */
-ngeo.layertree.component = angular.module('ngeoLayertree', [
-  ngeo.layertree.Controller.module.name
+const exports = angular.module('ngeoLayertree', [
+  ngeoLayertreeController.module.name
 ]);
 
 
-ngeo.layertree.component.value('ngeoLayertreeTemplateUrl',
+exports.value('ngeoLayertreeTemplateUrl',
   /**
    * @param {angular.JQLite} element Element.
    * @param {angular.Attributes} attrs Attributes.
@@ -21,13 +20,12 @@ ngeo.layertree.component.value('ngeoLayertreeTemplateUrl',
   (element, attrs) => {
     const templateUrl = attrs['ngeoLayertreeTemplateurl'];
     return templateUrl !== undefined ? templateUrl :
-      `${ngeo.baseModuleTemplateUrl}/layertree/component.html`; // nowebpack
-    // webpack: 'ngeo/layertree';
+      'ngeo/layertree';
   });
 
-// webpack: exports.run(/* @ngInject */ ($templateCache) => {
-// webpack:   $templateCache.put('ngeo/layertree', require('./component.html'));
-// webpack: });
+exports.run(/* @ngInject */ ($templateCache) => {
+  $templateCache.put('ngeo/layertree', require('./component.html'));
+});
 
 
 /**
@@ -117,14 +115,17 @@ ngeo.layertree.component.value('ngeoLayertreeTemplateUrl',
  * @ngdoc directive
  * @ngname ngeoLayertree
  */
-ngeo.layertree.component.directive_ = function(ngeoLayertreeTemplateUrl) {
+exports.directive_ = function(ngeoLayertreeTemplateUrl) {
   return {
     restrict: 'A',
     scope: true,
     templateUrl: ngeoLayertreeTemplateUrl,
-    controller: ngeo.layertree.Controller
+    controller: ngeoLayertreeController
   };
 };
 
 
-ngeo.layertree.component.directive('ngeoLayertree', ngeo.layertree.component.directive_);
+exports.directive('ngeoLayertree', exports.directive_);
+
+
+export default exports;

@@ -1,26 +1,25 @@
-goog.provide('gmf.theme.selectorComponent');
-
-goog.require('gmf'); // nowebpack
-goog.require('gmf.theme.Manager');
-goog.require('gmf.theme.Themes');
-goog.require('ol.events');
-
+/**
+ * @module gmf.theme.selectorComponent
+ */
+import gmfThemeManager from 'gmf/theme/Manager.js';
+import gmfThemeThemes from 'gmf/theme/Themes.js';
+import * as olEvents from 'ol/events.js';
 
 /**
  * @type {!angular.Module}
  */
-gmf.theme.selectorComponent = angular.module('gmfThemeSelectorComponent', [
-  gmf.theme.Manager.module.name,
-  gmf.theme.Themes.module.name,
+const exports = angular.module('gmfThemeSelectorComponent', [
+  gmfThemeManager.module.name,
+  gmfThemeThemes.module.name,
 ]);
 
 
-// webpack: exports.run(/* @ngInject */ ($templateCache) => {
-// webpack:   $templateCache.put('gmf/theme/selectorComponent', require('./selectorComponent.html'));
-// webpack: });
+exports.run(/* @ngInject */ ($templateCache) => {
+  $templateCache.put('gmf/theme/selectorComponent', require('./selectorComponent.html'));
+});
 
 
-gmf.theme.selectorComponent.value('gmfThemeSelectorTemplateUrl',
+exports.value('gmfThemeSelectorTemplateUrl',
   /**
    * @param {!angular.Attributes} $attrs Attributes.
    * @return {string} The template url.
@@ -28,8 +27,7 @@ gmf.theme.selectorComponent.value('gmfThemeSelectorTemplateUrl',
   ($attrs) => {
     const templateUrl = $attrs['gmfThemeSelectorTemplateUrl'];
     return templateUrl !== undefined ? templateUrl :
-      `${gmf.baseModuleTemplateUrl}/theme/selectorComponent.html`; // nowebpack
-    // webpack: 'gmf/theme/selectorComponent';
+      'gmf/theme/selectorComponent';
   });
 
 
@@ -95,7 +93,7 @@ function gmfThemeSelectorTemplateUrl($attrs, gmfThemeSelectorTemplateUrl) {
  *
  * @type {!angular.Component}
  */
-gmf.theme.selectorComponent.component_ = {
+exports.component_ = {
   bindings: {
     'filter': '<gmfThemeselectorFilter'
   },
@@ -103,7 +101,7 @@ gmf.theme.selectorComponent.component_ = {
   templateUrl: gmfThemeSelectorTemplateUrl
 };
 
-gmf.theme.selectorComponent.component('gmfThemeselector', gmf.theme.selectorComponent.component_);
+exports.component('gmfThemeselector', exports.component_);
 
 
 /**
@@ -116,7 +114,7 @@ gmf.theme.selectorComponent.component('gmfThemeselector', gmf.theme.selectorComp
  * @ngdoc controller
  * @ngname gmfThemeselectorController
  */
-gmf.theme.selectorComponent.Controller_ = function($scope, gmfThemeManager, gmfThemes) {
+exports.Controller_ = function($scope, gmfThemeManager, gmfThemes) {
 
   /**
    * @type {gmf.theme.Manager}
@@ -148,7 +146,7 @@ gmf.theme.selectorComponent.Controller_ = function($scope, gmfThemeManager, gmfT
    */
   this.listenerKeys_ = [];
 
-  this.listenerKeys_.push(ol.events.listen(this.gmfThemes_, 'change', this.setThemes_, this));
+  this.listenerKeys_.push(olEvents.listen(this.gmfThemes_, 'change', this.setThemes_, this));
 
   $scope.$on('$destroy', this.handleDestroy_.bind(this));
 
@@ -159,7 +157,7 @@ gmf.theme.selectorComponent.Controller_ = function($scope, gmfThemeManager, gmfT
  * current theme.
  * @private
  */
-gmf.theme.selectorComponent.Controller_.prototype.setThemes_ = function() {
+exports.Controller_.prototype.setThemes_ = function() {
   this.gmfThemes_.getThemesObject().then((themes) => {
     // Keep only the themes dedicated to the theme switcher
     this.themes = this.filter ? themes.filter(this.filter) : themes;
@@ -173,7 +171,7 @@ gmf.theme.selectorComponent.Controller_.prototype.setThemes_ = function() {
  *     the theme should be added but it's already added.
  * @export
  */
-gmf.theme.selectorComponent.Controller_.prototype.setTheme = function(theme, opt_silent) {
+exports.Controller_.prototype.setTheme = function(theme, opt_silent) {
   if (theme) {
     this.gmfThemeManager.addTheme(theme, opt_silent);
   }
@@ -183,11 +181,14 @@ gmf.theme.selectorComponent.Controller_.prototype.setTheme = function(theme, opt
 /**
  * @private
  */
-gmf.theme.selectorComponent.Controller_.prototype.handleDestroy_ = function() {
-  this.listenerKeys_.forEach(ol.events.unlistenByKey);
+exports.Controller_.prototype.handleDestroy_ = function() {
+  this.listenerKeys_.forEach(olEvents.unlistenByKey);
   this.listenerKeys_.length = 0;
 };
 
 
-gmf.theme.selectorComponent.controller('gmfThemeselectorController',
-  gmf.theme.selectorComponent.Controller_);
+exports.controller('gmfThemeselectorController',
+  exports.Controller_);
+
+
+export default exports;

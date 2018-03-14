@@ -1,5 +1,5 @@
 {
-  "name": "ngeo",
+  "name": "ngeo-es6",
   "version": "2.3.0-dev.3",
   "description": "AngularJS OpenLayers Library",
   "scripts": {
@@ -88,7 +88,7 @@
     "moment": "2.21.0",
     "ol-cesium": "1.35.0",
     "olcs": "0.0.10",
-    "openlayers": "4.6.4",
+    "openlayers": "https://api.github.com/repos/openlayers/openlayers/tarball/bfae19c7e138533ad0c1a071d8886d55aac9bd35",
     "phantomjs-polyfill-string-includes": "1.0.0",
     "phantomjs-prebuilt": "2.1.16",
     "proj4": "2.4.4",

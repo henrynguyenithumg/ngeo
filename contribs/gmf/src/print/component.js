@@ -1,41 +1,43 @@
-goog.provide('gmf.print.component');
+/**
+ * @module gmf.print.component
+ */
+import gmfBase from 'gmf/index.js';
 
-goog.require('gmf');
 /** @suppress {extraRequire} */
-goog.require('gmf.authentication.Service');
-goog.require('gmf.theme.Themes');
-goog.require('goog.asserts');
-goog.require('ngeo.map.LayerHelper');
-goog.require('ngeo.map.FeatureOverlayMgr');
-goog.require('ngeo.misc.FeatureHelper');
-goog.require('ngeo.print.Service');
-goog.require('ngeo.print.Utils');
-goog.require('ngeo.query.MapQuerent');
-goog.require('ol.array');
-goog.require('ol.events');
-goog.require('ol.layer.Image');
-goog.require('ol.layer.Tile');
-goog.require('ol.layer.Group');
-goog.require('ol.Map');
-goog.require('ol.math');
+import gmfAuthenticationService from 'gmf/authentication/Service.js';
 
+import gmfThemeThemes from 'gmf/theme/Themes.js';
+import googAsserts from 'goog/asserts.js';
+import ngeoMapLayerHelper from 'ngeo/map/LayerHelper.js';
+import ngeoMapFeatureOverlayMgr from 'ngeo/map/FeatureOverlayMgr.js';
+import ngeoMiscFeatureHelper from 'ngeo/misc/FeatureHelper.js';
+import ngeoPrintService from 'ngeo/print/Service.js';
+import ngeoPrintUtils from 'ngeo/print/Utils.js';
+import ngeoQueryMapQuerent from 'ngeo/query/MapQuerent.js';
+import * as olArray from 'ol/array.js';
+import * as olEvents from 'ol/events.js';
+import olLayerImage from 'ol/layer/Image.js';
+import olLayerTile from 'ol/layer/Tile.js';
+import olLayerGroup from 'ol/layer/Group.js';
+import olMap from 'ol/Map.js';
+import * as olMath from 'ol/math.js';
 
 /**
  * @type {!angular.Module}
  */
-gmf.print.component = angular.module('gmfPrintComponent', [
-  gmf.authentication.Service.module.name,
-  gmf.theme.Themes.module.name,
-  ngeo.map.LayerHelper.module.name,
-  ngeo.map.FeatureOverlayMgr.module.name,
-  ngeo.misc.FeatureHelper.module.name,
-  ngeo.print.Service.module.name,
-  ngeo.print.Utils.module.name,
-  ngeo.query.MapQuerent.module.name,
+const exports = angular.module('gmfPrintComponent', [
+  gmfAuthenticationService.module.name,
+  gmfThemeThemes.module.name,
+  ngeoMapLayerHelper.module.name,
+  ngeoMapFeatureOverlayMgr.module.name,
+  ngeoMiscFeatureHelper.module.name,
+  ngeoPrintService.module.name,
+  ngeoPrintUtils.module.name,
+  ngeoQueryMapQuerent.module.name,
 ]);
 
 
-gmf.print.component.value('gmfPrintTemplateUrl',
+exports.value('gmfPrintTemplateUrl',
   /**
    * @param {angular.JQLite} element Element.
    * @param {angular.Attributes} attrs Attributes.
@@ -44,20 +46,19 @@ gmf.print.component.value('gmfPrintTemplateUrl',
   (element, attrs) => {
     const templateUrl = attrs['gmfPrintTemplateurl'];
     return templateUrl !== undefined ? templateUrl :
-      `${gmf.baseModuleTemplateUrl}/print/component.html`; // nowebpack
-    // webpack: 'gmf/print';
+      'gmf/print';
   });
 
-// webpack: exports.run(/* @ngInject */ ($templateCache) => {
-// webpack:   $templateCache.put('gmf/print', require('./component.html'));
-// webpack: });
+exports.run(/* @ngInject */ ($templateCache) => {
+  $templateCache.put('gmf/print', require('./component.html'));
+});
 
 
 /**
  * @enum {string}
  * @export
  */
-gmf.print.component.PrintStateEnum = {
+exports.PrintStateEnum = {
 
   /**
    * @type {string}
@@ -91,8 +92,8 @@ gmf.print.component.PrintStateEnum = {
 };
 
 
-gmf.print.component.value('gmfPrintState', {
-  'state': gmf.print.component.PrintStateEnum.CAPABILITIES_NOT_LOADED
+exports.value('gmfPrintState', {
+  'state': exports.PrintStateEnum.CAPABILITIES_NOT_LOADED
 });
 
 
@@ -155,7 +156,7 @@ function gmfPrintTemplateUrl($element, $attrs, gmfPrintTemplateUrl) {
  * @ngdoc component
  * @ngname gmfPrint
  */
-gmf.print.component.component_ = {
+exports.component_ = {
   bindings: {
     'map': '<gmfPrintMap',
     'active': '=gmfPrintActive',
@@ -170,13 +171,13 @@ gmf.print.component.component_ = {
 };
 
 
-gmf.print.component.component('gmfPrint', gmf.print.component.component_);
+exports.component('gmfPrint', exports.component_);
 
 
 /**
  * @private
  */
-gmf.print.component.Controller_ = class {
+exports.Controller_ = class {
 
   /**
    * @param {angular.Scope} $rootScope Angular root scope.
@@ -454,7 +455,7 @@ gmf.print.component.Controller_ = class {
   $onInit() {
     // Clear the capabilities if the roleId changes
     this.$scope_.$watch(() => this.gmfAuthenticationService_.getRoleId(), () => {
-      this.gmfPrintState_.state = gmf.print.component.PrintStateEnum.CAPABILITIES_NOT_LOADED;
+      this.gmfPrintState_.state = exports.PrintStateEnum.CAPABILITIES_NOT_LOADED;
       this.capabilities_ = null;
     });
 
@@ -505,10 +506,10 @@ gmf.print.component.Controller_ = class {
   getScaleFn(frameState) {
     // Don't compute an optimal scale if the user manualy choose a value not in
     // the pre-defined scales. (`scaleInput` in `gmfPrintOptions`).
-    goog.asserts.assert(this.layoutInfo.scales);
-    goog.asserts.assert(this.layoutInfo.scale !== undefined);
+    googAsserts.assert(this.layoutInfo.scales);
+    googAsserts.assert(this.layoutInfo.scale !== undefined);
     if (this.layoutInfo.scale === -1 ||
-        ol.array.includes(this.layoutInfo.scales, this.layoutInfo.scale)) {
+        olArray.includes(this.layoutInfo.scales, this.layoutInfo.scale)) {
       const mapSize = frameState.size;
       const viewResolution = frameState.viewState.resolution;
       this.layoutInfo.scale = this.getOptimalScale_(mapSize, viewResolution);
@@ -532,20 +533,20 @@ gmf.print.component.Controller_ = class {
         if (!this.active) {
           return;
         }
-        this.gmfPrintState_.state = gmf.print.component.PrintStateEnum.NOT_IN_USE;
+        this.gmfPrintState_.state = exports.PrintStateEnum.NOT_IN_USE;
         // Get capabilities - On success
         this.parseCapabilities_(resp);
-        this.postComposeListenerKey_ = ol.events.listen(this.map, 'postcompose', this.postcomposeListener_);
-        this.pointerDragListenerKey_ = ol.events.listen(this.map, 'pointerdrag', this.onPointerDrag_, this);
+        this.postComposeListenerKey_ = olEvents.listen(this.map, 'postcompose', this.postcomposeListener_);
+        this.pointerDragListenerKey_ = olEvents.listen(this.map, 'pointerdrag', this.onPointerDrag_, this);
         this.map.render();
       }, (resp) => {
         // Get capabilities - On error
-        this.gmfPrintState_.state = gmf.print.component.PrintStateEnum.ERROR_ON_GETCAPABILITIES;
+        this.gmfPrintState_.state = exports.PrintStateEnum.ERROR_ON_GETCAPABILITIES;
         this.capabilities_ = null;
       });
     } else {
-      ol.events.unlistenByKey(this.postComposeListenerKey_);
-      ol.events.unlistenByKey(this.pointerDragListenerKey_);
+      olEvents.unlistenByKey(this.postComposeListenerKey_);
+      olEvents.unlistenByKey(this.pointerDragListenerKey_);
       this.getSetRotation(0);
       this.map.render(); // Redraw (remove) post compose mask;
     }
@@ -604,9 +605,9 @@ gmf.print.component.Controller_ = class {
     this.layoutInfo.layout = this.layout_.name;
 
     const mapInfo = this.isAttributeInCurrentLayout_('map');
-    goog.asserts.assertObject(mapInfo);
+    googAsserts.assertObject(mapInfo);
     const clientInfo = mapInfo['clientInfo'];
-    goog.asserts.assertObject(clientInfo);
+    googAsserts.assertObject(clientInfo);
     this.paperSize_ = [clientInfo['width'], clientInfo['height']];
 
     this.updateCustomFields_();
@@ -735,7 +736,7 @@ gmf.print.component.Controller_ = class {
       if (this.rotateMask) {
         this.map.render();
       } else {
-        this.map.getView().setRotation(ol.math.toRadians(this.rotation));
+        this.map.getView().setRotation(olMath.toRadians(this.rotation));
       }
 
     }
@@ -773,7 +774,7 @@ gmf.print.component.Controller_ = class {
         let angle = (p0x * p1x + p0y * p1y) / (centerToP0 * centerToP1);
         angle = angle <= 1 ? sense * Math.acos(angle) : 0;
         const boost = centerToP1 / 200;
-        const increment = Math.round(ol.math.toDegrees(angle) * boost);
+        const increment = Math.round(olMath.toDegrees(angle) * boost);
 
         // Set rotation then update the view.
         this.getSetRotation(this.rotation + increment);
@@ -797,11 +798,11 @@ gmf.print.component.Controller_ = class {
    */
   print(format) {
     // Do not print if a print task is already processing.
-    if (this.gmfPrintState_.state === gmf.print.component.PrintStateEnum.PRINTING) {
+    if (this.gmfPrintState_.state === exports.PrintStateEnum.PRINTING) {
       return;
     }
     this.requestCanceler_ = this.$q_.defer();
-    this.gmfPrintState_.state = gmf.print.component.PrintStateEnum.PRINTING;
+    this.gmfPrintState_.state = exports.PrintStateEnum.PRINTING;
 
     const mapSize = this.map.getSize();
     const viewResolution = this.map.getView().getResolution() || 0;
@@ -829,11 +830,11 @@ gmf.print.component.Controller_ = class {
       }
     }
 
-    goog.asserts.assertNumber(this.layoutInfo.dpi);
-    goog.asserts.assertString(this.layoutInfo.layout);
+    googAsserts.assertNumber(this.layoutInfo.dpi);
+    googAsserts.assertString(this.layoutInfo.layout);
 
     // convert the WMTS layers to WMS
-    const map = new ol.Map({});
+    const map = new olMap({});
     map.setView(this.map.getView());
     const ol_layers = this.ngeoLayerHelper_.getFlatLayers(this.map.getLayerGroup());
     const new_ol_layers = [];
@@ -861,13 +862,13 @@ gmf.print.component.Controller_ = class {
 
       // Get the print native angle parameter for WMS layers when set to not use default value
       // Is applied only once when the value is overridden with a metadata from administration
-      if (layer instanceof ol.layer.Image && layer.get('printNativeAngle') === false) {
+      if (layer instanceof olLayerImage && layer.get('printNativeAngle') === false) {
         print_native_angle = false;
       }
 
       new_ol_layers.push(layer);
     }
-    map.setLayerGroup(new ol.layer.Group({
+    map.setLayerGroup(new olLayerGroup({
       layers: new_ol_layers,
       'printNativeAngle': print_native_angle
     }));
@@ -924,7 +925,7 @@ gmf.print.component.Controller_ = class {
    * @private
    */
   resetPrintStates_(opt_printState) {
-    this.gmfPrintState_.state = opt_printState || gmf.print.component.PrintStateEnum.NOT_IN_USE;
+    this.gmfPrintState_.state = opt_printState || exports.PrintStateEnum.NOT_IN_USE;
     this.curRef_ = '';
   }
 
@@ -943,8 +944,8 @@ gmf.print.component.Controller_ = class {
       data = [];
       columns = [];
       source.features.forEach(function(feature, i) {
-        goog.asserts.assert(feature);
-        const properties = ngeo.misc.FeatureHelper.getFilteredFeatureValues(feature);
+        googAsserts.assert(feature);
+        const properties = ngeoMiscFeatureHelper.getFilteredFeatureValues(feature);
         if (i === 0) {
           columns = Object.keys(properties).map(function tanslateColumns(prop) {
             return this.translate_(prop);
@@ -995,7 +996,7 @@ gmf.print.component.Controller_ = class {
   handleCreateReportSuccess_(resp) {
     const mfResp = /** @type {MapFishPrintReportResponse} */ (resp.data);
     const ref = mfResp.ref;
-    goog.asserts.assert(ref.length > 0);
+    googAsserts.assert(ref.length > 0);
     this.curRef_ = ref;
     this.getStatus_(ref);
   }
@@ -1046,7 +1047,7 @@ gmf.print.component.Controller_ = class {
    * @private
    */
   handleCreateReportError_() {
-    this.resetPrintStates_(gmf.print.component.PrintStateEnum.ERROR_ON_REPORT);
+    this.resetPrintStates_(exports.PrintStateEnum.ERROR_ON_REPORT);
   }
 
 
@@ -1062,7 +1063,7 @@ gmf.print.component.Controller_ = class {
 
     // Get layers from layertree only.
     const dataLayerGroup = this.ngeoLayerHelper_.getGroupFromMap(this.map,
-      gmf.DATALAYERGROUP_NAME);
+      gmfBase.DATALAYERGROUP_NAME);
     const layers = this.ngeoLayerHelper_.getFlatLayers(dataLayerGroup);
 
     // For each visible layer in reverse order, get the legend url.
@@ -1070,7 +1071,7 @@ gmf.print.component.Controller_ = class {
       classes = [];
       if (layer.getVisible() && layer.getSource()) {
         // For WMTS layers.
-        if (layer instanceof ol.layer.Tile) {
+        if (layer instanceof olLayerTile) {
           layerName = `${layer.get('layerNodeName')}`;
           icons = this.getMetadataLegendImage_(layerName);
           if (!icons) {
@@ -1124,10 +1125,10 @@ gmf.print.component.Controller_ = class {
    * @private
    */
   getMetadataLegendImage_(layerName) {
-    const groupNode = gmf.theme.Themes.findGroupByLayerNodeName(this.currentThemes_, layerName);
+    const groupNode = gmfThemeThemes.findGroupByLayerNodeName(this.currentThemes_, layerName);
     let node;
     if (groupNode && groupNode.children) {
-      node = gmf.theme.Themes.findObjectByName(groupNode.children, layerName);
+      node = gmfThemeThemes.findObjectByName(groupNode.children, layerName);
     }
     let legendImage;
     if (node && node.metadata) {
@@ -1192,8 +1193,11 @@ gmf.print.component.Controller_ = class {
    * @export
    */
   isState(stateEnumKey) {
-    return this.gmfPrintState_.state === gmf.print.component.PrintStateEnum[stateEnumKey];
+    return this.gmfPrintState_.state === exports.PrintStateEnum[stateEnumKey];
   }
 };
 
-gmf.print.component.controller('GmfPrintController', gmf.print.component.Controller_);
+exports.controller('GmfPrintController', exports.Controller_);
+
+
+export default exports;

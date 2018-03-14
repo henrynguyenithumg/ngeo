@@ -1,38 +1,42 @@
-goog.provide('gmf.query.windowComponent');
+/**
+ * @module gmf.query.windowComponent
+ */
+import googAsserts from 'goog/asserts.js';
+import ngeoMapFeatureOverlayMgr from 'ngeo/map/FeatureOverlayMgr.js';
+import ngeoMiscFeatureHelper from 'ngeo/misc/FeatureHelper.js';
 
-goog.require('gmf'); // nowebpack
-goog.require('goog.asserts');
-goog.require('ngeo.map.FeatureOverlayMgr');
-goog.require('ngeo.misc.FeatureHelper');
 /** @suppress {extraRequire} */
-goog.require('ngeo.misc.swipe');
+import ngeoMiscSwipe from 'ngeo/misc/swipe.js';
+
 /** @suppress {extraRequire} - required for `ngeoQueryResult` */
-goog.require('ngeo.query.MapQuerent');
-goog.require('ol.Collection');
-goog.require('ol.obj');
-goog.require('ol.style.Circle');
-goog.require('ol.style.Fill');
-goog.require('ol.style.Stroke');
-goog.require('ol.style.Style');
-// webpack: import 'jquery-ui/ui/widgets/resizable.js';
-// webpack: import 'angular-animate';
-// webpack: import 'angular-touch';
+import ngeoQueryMapQuerent from 'ngeo/query/MapQuerent.js';
+
+import olCollection from 'ol/Collection.js';
+import * as olObj from 'ol/obj.js';
+import olStyleCircle from 'ol/style/Circle.js';
+import olStyleFill from 'ol/style/Fill.js';
+import olStyleStroke from 'ol/style/Stroke.js';
+import olStyleStyle from 'ol/style/Style.js';
+
+import 'jquery-ui/ui/widgets/resizable.js';
+import 'angular-animate';
+import 'angular-touch';
 
 
 /**
  * @type {!angular.Module}
  */
-gmf.query.windowComponent = angular.module('gmfQueryWindowComponent', [
-  ngeo.map.FeatureOverlayMgr.module.name,
-  ngeo.misc.FeatureHelper.module.name,
-  ngeo.misc.swipe.name,
-  ngeo.query.MapQuerent.module.name,
+const exports = angular.module('gmfQueryWindowComponent', [
+  ngeoMapFeatureOverlayMgr.module.name,
+  ngeoMiscFeatureHelper.module.name,
+  ngeoMiscSwipe.name,
+  ngeoQueryMapQuerent.module.name,
   'ngAnimate',
   'ngTouch',
 ]);
 
 
-gmf.query.windowComponent.config(['$animateProvider',
+exports.config(['$animateProvider',
   /**
    * For performance reason, only perform animation on elements that have the
    * `gmf-animatable` css class.
@@ -44,7 +48,7 @@ gmf.query.windowComponent.config(['$animateProvider',
 ]);
 
 
-gmf.query.windowComponent.value('gmfDisplayquerywindowTemplateUrl',
+exports.value('gmfDisplayquerywindowTemplateUrl',
   /**
    * @param {!angular.JQLite} $element Element.
    * @param {!angular.Attributes} $attrs Attributes.
@@ -53,13 +57,12 @@ gmf.query.windowComponent.value('gmfDisplayquerywindowTemplateUrl',
   ($element, $attrs) => {
     const templateUrl = $attrs['gmfDisplayquerywindowTemplateurl'];
     return templateUrl !== undefined ? templateUrl :
-      `${gmf.baseModuleTemplateUrl}/query/windowComponent.html`; // nowebpack
-    // webpack: 'gmf/query/windowComponent';
+      'gmf/query/windowComponent';
   });
 
-// webpack: exports.run(/* @ngInject */ ($templateCache) => {
-// webpack:   $templateCache.put('gmf/query/windowComponent', require('./windowComponent.html'));
-// webpack: });
+exports.run(/* @ngInject */ ($templateCache) => {
+  $templateCache.put('gmf/query/windowComponent', require('./windowComponent.html'));
+});
 
 
 /**
@@ -105,7 +108,7 @@ function gmfDisplayquerywindowTemplateUrl($element, $attrs, gmfDisplayquerywindo
  * @ngdoc component
  * @ngname gmfDisplayquerywindow
  */
-gmf.query.windowComponent.component_ = {
+exports.component_ = {
   controller: 'GmfDisplayquerywindowController as ctrl',
   bindings: {
     'draggableContainment': '<?gmfDisplayquerywindowDraggableContainment',
@@ -119,7 +122,7 @@ gmf.query.windowComponent.component_ = {
 };
 
 
-gmf.query.windowComponent.component('gmfDisplayquerywindow', gmf.query.windowComponent.component_);
+exports.component('gmfDisplayquerywindow', exports.component_);
 
 
 /**
@@ -135,7 +138,7 @@ gmf.query.windowComponent.component('gmfDisplayquerywindow', gmf.query.windowCom
  * @ngdoc controller
  * @ngname GmfDisplayquerywindowController
  */
-gmf.query.windowComponent.Controller_ = function($element, $scope, ngeoQueryResult, ngeoMapQuerent,
+exports.Controller_ = function($element, $scope, ngeoQueryResult, ngeoMapQuerent,
   ngeoFeatureOverlayMgr) {
 
   /**
@@ -197,7 +200,7 @@ gmf.query.windowComponent.Controller_ = function($element, $scope, ngeoQueryResu
    * @type {!ol.Collection}
    * @private
    */
-  this.features_ = new ol.Collection();
+  this.features_ = new olCollection();
 
   /**
    * @type {!ngeo.map.FeatureOverlayMgr}
@@ -209,7 +212,7 @@ gmf.query.windowComponent.Controller_ = function($element, $scope, ngeoQueryResu
    * @type {!ol.Collection}
    * @private
    */
-  this.highlightFeatures_ = new ol.Collection();
+  this.highlightFeatures_ = new olCollection();
 
   /**
    * @type {?ngeox.QueryResultSource}
@@ -268,7 +271,7 @@ gmf.query.windowComponent.Controller_ = function($element, $scope, ngeoQueryResu
 /**
  * Initialise the controller.
  */
-gmf.query.windowComponent.Controller_.prototype.$onInit = function() {
+exports.Controller_.prototype.$onInit = function() {
   this.draggableContainment = this.draggableContainment || 'document';
   this.desktop = this.desktop;
   this.collapsed = this['defaultCollapsedFn'] ?
@@ -283,7 +286,7 @@ gmf.query.windowComponent.Controller_.prototype.$onInit = function() {
   featuresOverlay.setFeatures(this.features_);
   const featuresStyle = this['featuresStyleFn']();
   if (featuresStyle !== undefined) {
-    goog.asserts.assertInstanceof(featuresStyle, ol.style.Style);
+    googAsserts.assertInstanceof(featuresStyle, olStyleStyle);
     featuresOverlay.setStyle(featuresStyle);
   }
 
@@ -291,13 +294,13 @@ gmf.query.windowComponent.Controller_.prototype.$onInit = function() {
   highlightFeaturesOverlay.setFeatures(this.highlightFeatures_);
   let highlightFeatureStyle = this['selectedFeatureStyleFn']();
   if (highlightFeatureStyle !== undefined) {
-    goog.asserts.assertInstanceof(highlightFeatureStyle, ol.style.Style);
+    googAsserts.assertInstanceof(highlightFeatureStyle, olStyleStyle);
   } else {
-    const fill = new ol.style.Fill({color: [255, 0, 0, 0.6]});
-    const stroke = new ol.style.Stroke({color: [255, 0, 0, 1], width: 2});
-    highlightFeatureStyle = new ol.style.Style({
+    const fill = new olStyleFill({color: [255, 0, 0, 0.6]});
+    const stroke = new olStyleStroke({color: [255, 0, 0, 1], width: 2});
+    highlightFeatureStyle = new olStyleStyle({
       fill: fill,
-      image: new ol.style.Circle({
+      image: new olStyleCircle({
         fill: fill,
         radius: 5,
         stroke: stroke
@@ -326,7 +329,7 @@ gmf.query.windowComponent.Controller_.prototype.$onInit = function() {
  * highlight the first feature.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.show = function() {
+exports.Controller_.prototype.show = function() {
   this.clear();
   this.updateFeatures_();
 };
@@ -335,7 +338,7 @@ gmf.query.windowComponent.Controller_.prototype.show = function() {
 /**
  * @private
  */
-gmf.query.windowComponent.Controller_.prototype.updateFeatures_ = function() {
+exports.Controller_.prototype.updateFeatures_ = function() {
   this.setCurrentResult_(0, false);
   if (this.source !== null) {
     this.collectFeatures_();
@@ -352,7 +355,7 @@ gmf.query.windowComponent.Controller_.prototype.updateFeatures_ = function() {
  * @return {boolean} True if result has changed. False else.
  * @private
  */
-gmf.query.windowComponent.Controller_.prototype.setCurrentResult_ = function(
+exports.Controller_.prototype.setCurrentResult_ = function(
   position, setHighlight) {
   let hasChanged = false;
   if (position !== this.currentResult) {
@@ -389,7 +392,7 @@ gmf.query.windowComponent.Controller_.prototype.setCurrentResult_ = function(
  * the map.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.previous = function() {
+exports.Controller_.prototype.previous = function() {
   let position = this.currentResult - 1;
   if (position < 0) {
     position = this.getResultLength() - 1;
@@ -406,7 +409,7 @@ gmf.query.windowComponent.Controller_.prototype.previous = function() {
  * the map.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.next = function() {
+exports.Controller_.prototype.next = function() {
   let position = this.currentResult + 1;
   const positionMax = this.getResultLength() - 1;
   if (position > positionMax) {
@@ -424,14 +427,14 @@ gmf.query.windowComponent.Controller_.prototype.next = function() {
  * @param {ngeox.QueryResult} queryResult ngeo query result.
  * @private
  */
-gmf.query.windowComponent.Controller_.prototype.updateQueryResult_ = function(queryResult) {
+exports.Controller_.prototype.updateQueryResult_ = function(queryResult) {
   this.ngeoQueryResult.total = 0;
   this.ngeoQueryResult.sources.length = 0;
   for (let i = 0; i < queryResult.sources.length; i++) {
     const source = queryResult.sources[i];
     source.features = source.features.filter((feature) => {
-      goog.asserts.assert(feature);
-      return !ol.obj.isEmpty(ngeo.misc.FeatureHelper.getFilteredFeatureValues(feature));
+      googAsserts.assert(feature);
+      return !olObj.isEmpty(ngeoMiscFeatureHelper.getFilteredFeatureValues(feature));
     });
     this.ngeoQueryResult.sources.push(source);
     this.ngeoQueryResult.total += source.features.length;
@@ -444,7 +447,7 @@ gmf.query.windowComponent.Controller_.prototype.updateQueryResult_ = function(qu
  * @return {number} Total number of features.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.getResultLength = function() {
+exports.Controller_.prototype.getResultLength = function() {
   if (this.selectedSource === null) {
     return this.ngeoQueryResult.total;
   } else {
@@ -457,7 +460,7 @@ gmf.query.windowComponent.Controller_.prototype.getResultLength = function() {
  * @return {boolean} If the first result is active.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.isFirst = function() {
+exports.Controller_.prototype.isFirst = function() {
   return this.currentResult == 0;
 };
 
@@ -466,7 +469,7 @@ gmf.query.windowComponent.Controller_.prototype.isFirst = function() {
  * @return {boolean} If the last result is active.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.isLast = function() {
+exports.Controller_.prototype.isLast = function() {
   return this.currentResult == this.getResultLength() - 1;
 };
 
@@ -477,11 +480,11 @@ gmf.query.windowComponent.Controller_.prototype.isLast = function() {
  * @return {Object?} Filtered properties of the current feature or null.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.getFeatureValues = function() {
+exports.Controller_.prototype.getFeatureValues = function() {
   if (!this.feature) {
     return null;
   }
-  return ngeo.misc.FeatureHelper.getFilteredFeatureValues(this.feature);
+  return ngeoMiscFeatureHelper.getFilteredFeatureValues(this.feature);
 };
 
 
@@ -494,7 +497,7 @@ gmf.query.windowComponent.Controller_.prototype.getFeatureValues = function() {
  * or the previous result.
  * @private
  */
-gmf.query.windowComponent.Controller_.prototype.animate_ = function(isNext) {
+exports.Controller_.prototype.animate_ = function(isNext) {
   this.isNext = isNext;
   this.animate++;
 };
@@ -504,7 +507,7 @@ gmf.query.windowComponent.Controller_.prototype.animate_ = function(isNext) {
  * Collect all features in the queryResult object.
  * @private
  */
-gmf.query.windowComponent.Controller_.prototype.collectFeatures_ = function() {
+exports.Controller_.prototype.collectFeatures_ = function() {
   const sources = this.ngeoQueryResult.sources;
   this.features_.clear();
   for (let i = 0; i < sources.length; i++) {
@@ -527,7 +530,7 @@ gmf.query.windowComponent.Controller_.prototype.collectFeatures_ = function() {
  * it exists because it must be added to the 'non-selected' features collection.
  * @private
  */
-gmf.query.windowComponent.Controller_.prototype.highlightCurrentFeature_ =
+exports.Controller_.prototype.highlightCurrentFeature_ =
 function(opt_lastFeature) {
   this.highlightFeatures_.clear();
   this.features_.remove(this.feature);
@@ -543,7 +546,7 @@ function(opt_lastFeature) {
  * from the map.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.close = function() {
+exports.Controller_.prototype.close = function() {
   this.open = false;
   this.clear();
   this.ngeoMapQuerent_.clear();
@@ -555,7 +558,7 @@ gmf.query.windowComponent.Controller_.prototype.close = function() {
  * from the map.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.clear = function() {
+exports.Controller_.prototype.clear = function() {
   this.feature = null;
   this.source = null;
   this.currentResult = -1;
@@ -569,7 +572,7 @@ gmf.query.windowComponent.Controller_.prototype.clear = function() {
  * @param {ngeox.QueryResultSource} source The source to select.
  * @export
  */
-gmf.query.windowComponent.Controller_.prototype.setSelectedSource = function(source) {
+exports.Controller_.prototype.setSelectedSource = function(source) {
   if (source !== null && source.features.length <= 0) {
     // sources with no results can not be selected
     return;
@@ -580,5 +583,8 @@ gmf.query.windowComponent.Controller_.prototype.setSelectedSource = function(sou
 };
 
 
-gmf.query.windowComponent.controller('GmfDisplayquerywindowController',
-  gmf.query.windowComponent.Controller_);
+exports.controller('GmfDisplayquerywindowController',
+  exports.Controller_);
+
+
+export default exports;
