@@ -42,7 +42,7 @@
 
     
 
-    <h4 class="name" id="LayerHelper"><span class="type-signature"></span>new LayerHelper<span class="signature">($q, $http)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="LayerHelper"><span class="type-signature"></span>new LayerHelper<span class="signature">($q, $http, ngeoTilesPreloadingLimit)</span><span class="type-signature"></span></h4>
 
     
 
@@ -122,6 +122,28 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>ngeoTilesPreloadingLimit</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Load tiles up to preload levels. By default preload is Infinity,
+    which means load all tiles on the top of the visible level. See also preload value
+    in documentation for ol.Layer.Tile.</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -161,7 +183,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L26">src/map/LayerHelper.js:26</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L29">src/map/LayerHelper.js:29</a>
     </div>
     
 
@@ -243,7 +265,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L45">src/map/LayerHelper.js:45</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L55">src/map/LayerHelper.js:55</a>
     </div>
     
 
@@ -299,7 +321,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L460">src/map/LayerHelper.js:460</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L484">src/map/LayerHelper.js:484</a>
     </div>
     
 
@@ -355,7 +377,7 @@
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L51">src/map/LayerHelper.js:51</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L61">src/map/LayerHelper.js:61</a>
     </div>
     
 
@@ -495,7 +517,7 @@ returned Group.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L233">src/map/LayerHelper.js:233</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L243">src/map/LayerHelper.js:243</a>
     </div>
     
 
@@ -826,7 +848,7 @@ separated layers names (see <a href="http://openlayers.org/en/master/apidoc/ol.s
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L69">src/map/LayerHelper.js:69</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L79">src/map/LayerHelper.js:79</a>
     </div>
     
 
@@ -1009,7 +1031,7 @@ separated layers names (see <a href="http://openlayers.org/en/master/apidoc/ol.s
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L107">src/map/LayerHelper.js:107</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L117">src/map/LayerHelper.js:117</a>
     </div>
     
 
@@ -1255,7 +1277,7 @@ as key 'capabilitiesStyles' as param of the new layer.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L153">src/map/LayerHelper.js:153</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L163">src/map/LayerHelper.js:163</a>
     </div>
     
 
@@ -1468,7 +1490,7 @@ and a capability layer.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L200">src/map/LayerHelper.js:200</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L210">src/map/LayerHelper.js:210</a>
     </div>
     
 
@@ -1612,7 +1634,7 @@ of others groups.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L279">src/map/LayerHelper.js:279</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L289">src/map/LayerHelper.js:289</a>
     </div>
     
 
@@ -1778,7 +1800,7 @@ the map.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L252">src/map/LayerHelper.js:252</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L262">src/map/LayerHelper.js:262</a>
     </div>
     
 
@@ -1943,7 +1965,7 @@ layers contained in that group are searched as well.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L316">src/map/LayerHelper.js:316</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L326">src/map/LayerHelper.js:326</a>
     </div>
     
 
@@ -2082,7 +2104,7 @@ layers contained in that group are searched as well.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L451">src/map/LayerHelper.js:451</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L475">src/map/LayerHelper.js:475</a>
     </div>
     
 
@@ -2324,7 +2346,7 @@ layers contained in that group are searched as well.</p>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L362">src/map/LayerHelper.js:362</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L372">src/map/LayerHelper.js:372</a>
     </div>
     
 
@@ -2468,7 +2490,7 @@ ngeo layerHelper service.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L339">src/map/LayerHelper.js:339</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L349">src/map/LayerHelper.js:349</a>
     </div>
     
 
@@ -2631,7 +2653,7 @@ ngeo layerHelper service.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L391">src/map/LayerHelper.js:391</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L401">src/map/LayerHelper.js:401</a>
     </div>
     
 
@@ -2774,7 +2796,157 @@ ngeo layerHelper service.</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L406">src/map/LayerHelper.js:406</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L416">src/map/LayerHelper.js:416</a>
+    </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setZIndexToFirstLevelChildren"><span class="type-signature"></span>setZIndexToFirstLevelChildren<span class="signature">(element, ZIndex)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Set ZIndex property to first level children elements</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                <a href="ol.layer.Group.html">ol.layer.Group</a>|<a href="ol.layer.Base.html">ol.layer.Base</a>
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The group of layer with first level children layers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ZIndex</code></td>
+            
+
+            <td class="type">
+            
+                number
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ZIndex for children element.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="tag-source">
+    
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L434">src/map/LayerHelper.js:434</a>
     </div>
     
 
@@ -2975,7 +3147,7 @@ in a ISO-8601 string datetime or time interval format</p></td>
     
     <div class="tag-source">
     
-        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L429">src/map/LayerHelper.js:429</a>
+        <a href="https://github.com/camptocamp/ngeo/blob/master/src/map/LayerHelper.js#L453">src/map/LayerHelper.js:453</a>
     </div>
     
 
